@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="Shell {Edit Data Set - Data Set}/Shell {workspace - target_classes_CGP013P/SFS_CGP_013P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP033PBODY}/Shell {workspace - target_classes_CGP033P - new/SFS_CGP_033P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP075PHEADER}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP059P/SFS_CGP_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="524" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="175" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Select Data Binding}/Shell {workspace - target_classes_CGP013P/SFS_CGP_013P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1008" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="476" key="DIALOG_HEIGHT"/>
+		<item value="465" key="DIALOG_X_ORIGIN"/>
+		<item value="207" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP060P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="907" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Source - CGP018P_DATA_SOURCE}/Shell {workspace - target_classes_CGP018P/SFS_ADT_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP014P}/Shell {workspace - target_classes_CGP035P/SFS_CGP_035P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Source - OPI}/Shell {workspace - target_classes_CGP019P/SFS_CGP_019P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP035P}/Shell {workspace - target_classes_CGP035P/SFS_CGP_035P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1913" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Select Data Binding}/Shell {workspace - target_classes_CGP015P - new/SFS_CGP_015P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1008" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="476" key="DIALOG_HEIGHT"/>
+		<item value="465" key="DIALOG_X_ORIGIN"/>
+		<item value="207" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP059PBANKNAME}/Shell {workspace - target_classes_CGP059P/SFS_CGP_059P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP061PHEADER}/Shell {workspace - target_classes_CGP015P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP017P}/Shell {workspace - target_classes_CGP017P/SFS_CGP_017P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1938" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1048" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP033PJOINT}/Shell {workspace - target_classes_CGP033P - new/SFS_CGP_033P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP061PJOINT2}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP033P - new/SFS_CGP_033P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP061PJOINT2}/Shell {workspace - target_classes_CGP015P - new/SFS_CGP_015P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP015PHEADER}/Shell {workspace - target_classes_CGP015P - new/SFS_CGP_015P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1938" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1048" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP060PJOINT2}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP088P/SFS_CGP_013P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - BANKBIC}/Shell {workspace - target_classes_CGP015P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP002P/SFS_CGP_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - sumOfItem}/Shell {workspace - target_classes_CGP013P/SFS_CGP_013P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP013P}/Shell {workspace - target_classes_CGP013P/SFS_CGP_013P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP075P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - Data Set1}/Shell {workspace - target_classes_CGP018P/SFS_ADT_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP014P}/Shell {workspace - target_classes_CGP019P/SFS_CGP_014P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1038" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP018P_DATA}/Shell {workspace - target_classes_CGP018P/SFS_CGP_018P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP059P}/Shell {workspace - target_classes_CGP016P - new/SFS_CGP_016P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP060PJOINT}/Shell {workspace - target_classes_CGP060P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP019P/SFS_CGP_019P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Source - Data Source}/Shell {workspace - target_classes_CGP018P/SFS_ADT_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP061PBODY}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP035PJoint}/Shell {workspace - target_classes_CGP035P/SFS_CGP_035P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP075PJOINT}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP013PJOINTrabic}/Shell {workspace - target_classes_CGP013P/SFS_CGP_013P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP014P/SFS_CGP_014P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - OPI-EPS_OUTWARD_HEADER}/Shell {workspace - target_classes_CGP097P-new/SFS_CGP_097P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - ERRORCODE}/Shell {workspace - target_classes_CGP015P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP015PBODY}/Shell {workspace - target_classes_CGP015P - new/SFS_CGP_015P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1938" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1048" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - BANKBIC}/Shell {workspace - target_classes_CGP033P - new/SFS_CGP_033P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Source - SESSDS}/Shell {workspace - target_classes_CGP018P/SFS_ADT_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP075PBODY}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP097P-new/SFS_CGP_097P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP059PBANKNAME}/Shell {workspace - target_classes_CGP059P/SFS_CGP_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP033PHEADER}/Shell {workspace - target_classes_CGP033P - new/SFS_CGP_033P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - BankBIC}/Shell {workspace - target_classes_CGP013P/SFS_CGP_013P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP075PBODY}/Shell {workspace - target_classes_CGP075P/SFS_CGP_075P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Source - SESSDS}/Shell {workspace - target_classes_CGP019P/SFS_CGP_019P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP075P - new/SFS_CGP_075P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP059P/SFS_CGP_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP097P-new/SFS_CGP_097P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="787" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP059P}/Shell {workspace - target_classes_CGP002P/SFS_CGP_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1938" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1048" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP019P/SFS_CGP_019P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="524" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="175" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - BANKBIC}/Shell {workspace - target_classes_CGP060P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1938" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1048" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Source - SESUSER}/Shell {workspace - target_classes_LCGP002X/SFS_ADT_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="641" key="DIALOG_X_ORIGIN"/>
+		<item value="258" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP019P}/Shell {workspace - target_classes_CGP019P/SFS_CGP_014P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1938" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1048" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - Data Set}/Shell {workspace - target_classes_CGP018P/SFS_ADT_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Select Data Binding}/Shell {workspace - target_classes_LCGP002X/SFS_ADT_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1008" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="476" key="DIALOG_HEIGHT"/>
+		<item value="465" key="DIALOG_X_ORIGIN"/>
+		<item value="207" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Select Data Binding}/Shell {workspace - target_classes_CGP019P/SFS_CGP_019P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1008" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="476" key="DIALOG_HEIGHT"/>
+		<item value="465" key="DIALOG_X_ORIGIN"/>
+		<item value="207" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Source - SESUSER}/Shell {workspace - target_classes_CGP018P/SFS_ADT_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP075PHEADER}/Shell {workspace - target_classes_CGP075P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1938" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1048" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - Data Set}/Shell {workspace - target_classes_CGP033P - new/SFS_CGP_033P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Select Data Binding}/Shell {workspace - target_classes_CGP097P-new/SFS_CGP_097P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1008" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="476" key="DIALOG_HEIGHT"/>
+		<item value="465" key="DIALOG_X_ORIGIN"/>
+		<item value="207" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_LCGP002X/SFS_LCGP_002X.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP035P/SFS_CGP_035P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP061PBODY}/Shell {workspace - target_classes_CGP015P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1938" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1048" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP061PHEADER}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP014P/SFS_CGP_014P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="619" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="112" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - BODYWITHBIC}/Shell {workspace - target_classes_CGP033P - new/SFS_CGP_033P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1938" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1048" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - AUDITDS}/Shell {workspace - target_classes_CGP019P/SFS_CGP_019P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP018P/SFS_CGP_018P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="524" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="175" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP019P}/Shell {workspace - target_classes_CGP019P/SFS_CGP_019P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - Data Set}/Shell {workspace - target_classes_CGP060P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP016P - new/SFS_CGP_016P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP002P/SFS_CGP_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="955" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP060PHEADER}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP060PJOINT2}/Shell {workspace - target_classes_CGP060P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP075PJOINT2}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP016P}/Shell {workspace - target_classes_CGP016P - new/SFS_CGP_016P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1938" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1048" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP061PJOINT}/Shell {workspace - target_classes_CGP015P - new/SFS_CGP_015P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP075PJOINT}/Shell {workspace - target_classes_CGP075P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1938" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1048" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP015P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP060P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP059P/SFS_CGP_059P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP014P}/Shell {workspace - C:\eclipse\workspace\target_classes_CGP014P\SFS_CGP_014P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP016PHEADER}/Shell {workspace - target_classes_CGP016P - new/SFS_CGP_016P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Select Data Binding}/Shell {workspace - target_classes_CGP060P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1008" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="476" key="DIALOG_HEIGHT"/>
+		<item value="465" key="DIALOG_X_ORIGIN"/>
+		<item value="207" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP060PBODY}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP033P - new/SFS_CGP_033P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="787" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP033PBODY}/Shell {workspace - target_classes_CGP060P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Cube Builder}/Shell {workspace - target_classes_CGP019P/SFS_CGP_019P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="820" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="656" key="SASHFORM.RIGHT"/>
+		<item value="164" key="SASHFORM.LEFT"/>
+		<item value="600" key="DIALOG_HEIGHT"/>
+		<item value="559" key="DIALOG_X_ORIGIN"/>
+		<item value="124" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP075PJOINT2}/Shell {workspace - target_classes_CGP075P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - LCGP002X}/Shell {workspace - target_classes_LCGP002X/SFS_ADT_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1452" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="957" key="DIALOG_HEIGHT"/>
+		<item value="352" key="DIALOG_X_ORIGIN"/>
+		<item value="32" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP035P/SFS_CGP_035P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="643" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="96" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP060PJOINT}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - LCGP002X}/Shell {workspace - target_classes_CGP002P/SFS_CGP_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP060PBODY}/Shell {workspace - target_classes_CGP060P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - ERRORCODE}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Select Data Binding}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1008" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="476" key="DIALOG_HEIGHT"/>
+		<item value="465" key="DIALOG_X_ORIGIN"/>
+		<item value="207" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Select Data Binding}/Shell {workspace - target_classes_CGP097P-new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1008" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="476" key="DIALOG_HEIGHT"/>
+		<item value="465" key="DIALOG_X_ORIGIN"/>
+		<item value="207" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Source - SESUSER}/Shell {workspace - C:\Users\Kenneth\projects\target_classes2\SFS_ADT_002P.rptdesign - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Binding}/Shell {Expression Builder (JavaScript)}/Shell {Aggregation Builder}/Shell {workspace - target_classes_CGP060P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1003" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="374" key="DIALOG_HEIGHT"/>
+		<item value="-31" key="DIALOG_X_ORIGIN"/>
+		<item value="91" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Binding}/Shell {Expression Builder (JavaScript)}/Shell {New Group}/Shell {workspace - target_classes_CGP033P - new/SFS_CGP_033P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1003" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="374" key="DIALOG_HEIGHT"/>
+		<item value="-31" key="DIALOG_X_ORIGIN"/>
+		<item value="91" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP014P}/Shell {workspace - target_classes_CGP014P/SFS_CGP_014P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - BankBIC}/Shell {workspace - target_classes_CGP014P/SFS_CGP_014P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP059P}/Shell {workspace - target_classes_CGP059P - new/SFS_CGP_059P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP059P/SFS_CGP_059P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="715" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="48" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - OPI-EPS_OUTWARD_HEADER}/Shell {workspace - target_classes_CGP097P-new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP014P}/Shell {workspace - target_classes_CGP017P/SFS_CGP_014P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP061PJOINT}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP018P_DATA}/Shell {workspace - target_classes_CGP018P - INCOMPETE/SFS_CGP_018P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - ERRORCODE}/Shell {workspace - target_classes_CGP075P/SFS_CGP_075P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP018P/SFS_CGP_018P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP013P/SFS_CGP_013P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="524" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="175" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP016BODY}/Shell {workspace - target_classes_CGP016P - new/SFS_CGP_016P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - Data Set}/Shell {workspace - target_classes_CGP002P/SFS_CGP_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP033PJOINT2}/Shell {workspace - target_classes_CGP033P - new/SFS_CGP_033P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP097P-new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="469" key="DIALOG_X_ORIGIN"/>
+		<item value="237" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP15PJOINT}/Shell {workspace - target_classes_CGP015P - new/SFS_CGP_015P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_LCGP002X/SFS_ADT_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP097P-new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="524" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="175" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP015P - new/SFS_CGP_015P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_061P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Source - SESSDS}/Shell {workspace - target_classes_LCGP002X/SFS_ADT_002P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Binding}/Shell {workspace - target_classes_CGP017P/SFS_CGP_014P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1181" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="643" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="96" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP060PHEADER}/Shell {workspace - target_classes_CGP060P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1918" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP061PHEADER}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - ERRORCODE}/Shell {workspace - target_classes_CGP060P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP013PJOINToabic}/Shell {workspace - target_classes_CGP013P/SFS_CGP_013P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP013P/SFS_CGP_013P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP013P}/Shell {workspace - target_classes_CGP088P/SFS_CGP_013P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1938" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1048" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {workspace - target_classes_CGP061P - new/SFS_CGP_060P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP015PJOINT2}/Shell {workspace - target_classes_CGP015P - new/SFS_CGP_015P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP059PBANKNAME}/Shell {workspace - target_classes_CGP059P - new/SFS_CGP_059P.rptdesign - C:\eclipse\workspace - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

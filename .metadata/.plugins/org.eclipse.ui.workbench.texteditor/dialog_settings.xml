@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="java" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="java."/>
+			<item value="java"/>
+			<item value=".DATE"/>
+			<item value="JAVA.SQL"/>
+			<item value="wild"/>
+			<item value="20190708"/>
+			<item value="processing"/>
+			<item value="processing_date"/>
+			<item value="INTERFACE_ENTITY&quot;"/>
+			<item value="&quot;CGP075PHEADER::INTERFACE_ENTITY&quot;"/>
+			<item value="CGP061P"/>
+			<item value="CGP061PHEADER"/>
+			<item value="061P"/>
+			<item value="CGP061"/>
+			<item value="CGP060"/>
+		</list>
+		<list key="replacehistory">
+			<item value="CGP075P"/>
+			<item value="CGP015P"/>
+			<item value="CGP061"/>
+			<item value="CGP061HEADER"/>
+			<item value="61HEADER"/>
+			<item value="060"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="336" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="454" key="DIALOG_HEIGHT"/>
+		<item value="1520" key="DIALOG_X_ORIGIN"/>
+		<item value="626" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

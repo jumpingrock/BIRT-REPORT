@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">120</property>
+    <parameters>
+        <scalar-parameter name="REPORT_NAME" id="7">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">CGP096P</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="PROCESSING_DATE" id="8">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript">Formatter.format(BirtDateTime.today(),"yyyyMMdd");</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="OPI" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">oracle.jdbc.OracleDriver</property>
+            <property name="odaURL">jdbc:oracle:thin:@192.168.1.113:1521/SESSDB</property>
+            <property name="odaUser">opipadm</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">b3BpcGFkbQ==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="BANK_BIC" id="6">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">BANK_BIC</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">BANK_BIC</text-property>
+                    <text-property name="heading">BANK_BIC</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BANK_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">BANK_NAME</text-property>
+                    <text-property name="heading">BANK_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">LOCAL_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">LOCAL_NAME</text-property>
+                    <text-property name="heading">LOCAL_NAME</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">BANK_BIC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">BANK_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">LOCAL_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">OPI</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">BANK_BIC</property>
+                    <property name="nativeName">BANK_BIC</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">BANK_NAME</property>
+                    <property name="nativeName">BANK_NAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">LOCAL_NAME</property>
+                    <property name="nativeName">LOCAL_NAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select 
+OPI.SFS_BIC.BANK_BIC,
+OPI.SFS_BIC.BANK_NAME,
+OPI.SFS_BIC.LOCAL_NAME
+from OPI.SFS_BIC]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>BANK_BIC</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>35</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>BANK_BIC</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>BANK_BIC</design:label>
+            <design:formattingHints>
+              <design:displaySize>35</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>BANK_NAME</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>140</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>BANK_NAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>BANK_NAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>140</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>LOCAL_NAME</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>140</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>LOCAL_NAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>LOCAL_NAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>140</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-header>
+                <grid id="1554">
+                    <property name="height">0.39166666666666666in</property>
+                    <property name="width">100%</property>
+                    <column id="1555">
+                        <property name="width">0.7in</property>
+                    </column>
+                    <column id="1556"/>
+                    <column id="1557">
+                        <property name="width">0.7916666666666666in</property>
+                    </column>
+                    <column id="1558">
+                        <property name="width">0.7916666666666666in</property>
+                    </column>
+                    <column id="1559">
+                        <property name="width">0.7916666666666666in</property>
+                    </column>
+                    <column id="1560">
+                        <property name="width">0.7916666666666666in</property>
+                    </column>
+                    <column id="1561">
+                        <property name="width">0.7916666666666666in</property>
+                    </column>
+                    <column id="1562">
+                        <property name="width">0.7916666666666666in</property>
+                    </column>
+                    <column id="1563">
+                        <property name="width">0.7916666666666666in</property>
+                    </column>
+                    <column id="1564">
+                        <property name="width">0.7916666666666666in</property>
+                    </column>
+                    <column id="1565">
+                        <property name="width">0.7916666666666666in</property>
+                    </column>
+                    <column id="1566">
+                        <property name="width">0.7916666666666666in</property>
+                    </column>
+                    <column id="1567">
+                        <property name="width">0.7833333333333333in</property>
+                    </column>
+                    <column id="1568">
+                        <property name="width">0.7833333333333333in</property>
+                    </column>
+                    <row id="1569">
+                        <property name="height">0.125in</property>
+                        <cell id="1570">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <data id="4735">
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">REPORT_NAME</property>
+                                        <expression name="expression" type="javascript">params["REPORT_NAME"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">REPORT_NAME</property>
+                            </data>
+                        </cell>
+                        <cell id="1573"/>
+                        <cell id="1574">
+                            <property name="colSpan">6</property>
+                            <property name="rowSpan">1</property>
+                            <text id="1497">
+                                <property name="textAlign">center</property>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[UOB (SG) SYSTEM - LCG]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="1580"/>
+                        <cell id="1581"/>
+                        <cell id="1582">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                            <text id="2642">
+                                <property name="textAlign">right</property>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[Page: ]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="3364">
+                            <auto-text id="2875">
+                                <property name="type">page-number</property>
+                            </auto-text>
+                        </cell>
+                    </row>
+                    <row id="1584">
+                        <property name="height">0.14166666666666666in</property>
+                        <cell id="1585">
+                            <property name="colSpan">4</property>
+                            <property name="rowSpan">1</property>
+                            <grid id="2831">
+                                <property name="width">3.1083333333333334in</property>
+                                <column id="2832">
+                                    <property name="width">0.8583333333333333in</property>
+                                </column>
+                                <column id="2833"/>
+                                <row id="2834">
+                                    <cell id="2835">
+                                        <text id="1888">
+                                            <property name="textAlign">left</property>
+                                            <property name="contentType">auto</property>
+                                            <text-property name="content"><![CDATA[Date Printed: ]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="2836">
+                                        <text-data id="2876">
+                                            <property name="textAlign">left</property>
+                                            <expression name="valueExpr">Formatter.format(BirtDateTime.now(), "dd/MM/yyyy hh:mm:ss");</expression>
+                                            <property name="contentType">html</property>
+                                        </text-data>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                        <cell id="1589">
+                            <property name="colSpan">6</property>
+                            <property name="rowSpan">1</property>
+                            <text id="1500">
+                                <property name="textAlign">center</property>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[LCGP097P – LIST OF ENTITIY BY VALUE DATE]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="1595">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                        </cell>
+                        <cell id="3366">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                        </cell>
+                        <cell id="3365"/>
+                    </row>
+                </grid>
+            </page-header>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+</report>

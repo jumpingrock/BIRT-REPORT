@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\eclipse\workspace"/>
+		<item value="C:\eclipse\workspace\target_classes_CGP019P"/>
+		<item value="C:\eclipse\workspace\target_classes_CGP014P"/>
+		<item value="C:\Users\Kenneth\projects\java\sess-report\sess-report-eps-audit"/>
+		<item value="C:\eclipse\workspace\target_classes_LCGP002X"/>
+	</list>
+	<section name="ResourceNavigator">
+		<item value="" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
+		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

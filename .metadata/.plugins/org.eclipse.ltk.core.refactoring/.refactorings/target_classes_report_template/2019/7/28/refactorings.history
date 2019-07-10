@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;target_classes_report_template/CGP097P.rptdesign&apos; to &apos;reporttemplate.rptdesign&apos;" description="Rename resource &apos;CGP097P.rptdesign&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="CGP097P.rptdesign" name="reporttemplate.rptdesign" stamp="1562729962477" updateReferences="true"/>
+</session>

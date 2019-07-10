@@ -1,0 +1,6 @@
+Jun 19, 2019 3:26:59 PM org.eclipse.birt.report.engine.util.ResourceLocatorWrapper findResource
+WARNING: LCGP002X.js is not accessible.
+Jun 19, 2019 3:26:59 PM org.eclipse.birt.report.engine.util.ResourceLocatorWrapper findResource
+WARNING: LCGP002X.js is not accessible.
+Jun 19, 2019 3:30:12 PM org.eclipse.birt.core.script.functionservice.impl.FunctionProvider setFunctionProvider
+WARNING: FunctionProvider should not set twice.

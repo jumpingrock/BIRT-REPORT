@@ -1,0 +1,1886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="author">Kevin</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
+    <text-property name="title">Online Payment Initiator (OPI) - Audit Trail Report</text-property>
+    <html-property name="description">This report lists all changes by division.</html-property>
+    <list-property name="userProperties">
+        <structure>
+            <property name="name">Data Cube.USERDS.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">Data Cube.USERDS.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+    </list-property>
+    <property name="Data Cube.USERDS.x">135</property>
+    <property name="Data Cube.USERDS.y">80</property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">792</property>
+        </structure>
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">77</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <text-property name="displayName">This report lists all users by division.</text-property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">fixed layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="BANK_NAME" id="626">
+            <text-property name="promptText">Bank name</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">UOB BANK SINGAPORE</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="REPORT_NAME" id="627">
+            <text-property name="promptText">Report name</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">SFS_CAI_002P</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="SESSDS" id="611">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">oracle.jdbc.OracleDriver</property>
+            <property name="odaURL">jdbc:oracle:thin:@192.168.1.113:1521/SESSDB</property>
+            <property name="odaUser">opipadm</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">b3BpcGFkbQ==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile.sqbDataSet" name="AUDITDS" id="77">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">JOB_DIVISION</property>
+                    <property name="alias">JOB_DIVISION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">JOB_DIVISION</text-property>
+                    <text-property name="heading">JOB_DIVISION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">LOCAL_DESCRIPTION</property>
+                    <property name="alias">LOCAL_DESCRIPTION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">LOCAL_DESCRIPTION</text-property>
+                    <text-property name="heading">LOCAL_DESCRIPTION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">RECORD_ID</property>
+                    <property name="alias">RECORD_ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">RECORD_ID</text-property>
+                    <text-property name="heading">RECORD_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">KEY_ID</property>
+                    <property name="alias">KEY_ID</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">KEY_ID</text-property>
+                    <text-property name="heading">KEY_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ACTION</property>
+                    <property name="alias">ACTION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ACTION</text-property>
+                    <text-property name="heading">ACTION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FIELD_ID</property>
+                    <property name="alias">FIELD_ID</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">FIELD_ID</text-property>
+                    <text-property name="heading">FIELD_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DATA_ORIGINAL</property>
+                    <property name="alias">DATA_ORIGINAL</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">DATA_ORIGINAL</text-property>
+                    <text-property name="heading">DATA_ORIGINAL</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DATA_UPDATE</property>
+                    <property name="alias">DATA_UPDATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">DATA_UPDATE</text-property>
+                    <text-property name="heading">DATA_UPDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MAKER_ID</property>
+                    <property name="alias">MAKER_ID</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">MAKER_ID</text-property>
+                    <text-property name="heading">MAKER_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MAKER_TMS</property>
+                    <property name="alias">MAKER_TMS</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">MAKER_TMS</text-property>
+                    <text-property name="heading">MAKER_TMS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">REVIEWER_ID</property>
+                    <property name="alias">REVIEWER_ID</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">REVIEWER_ID</text-property>
+                    <text-property name="heading">REVIEWER_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">REVIEWER_TMS</property>
+                    <property name="alias">REVIEWER_TMS</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">REVIEWER_TMS</text-property>
+                    <text-property name="heading">REVIEWER_TMS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">KEY_DATA</property>
+                    <property name="alias">KEY_DATA</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">KEY_DATA</text-property>
+                    <text-property name="heading">KEY_DATA</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">JOB_DIVISION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">LOCAL_DESCRIPTION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">RECORD_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">KEY_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">ACTION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">FIELD_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">DATA_ORIGINAL</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">DATA_UPDATE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">MAKER_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">MAKER_TMS</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">REVIEWER_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">REVIEWER_TMS</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">APPROVED_TMS</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">APPROVED_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">KEY_DATA</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">ENTITY_NO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">TRANS_CODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">TRANS_DESC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">ACCT_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">ACCT_TYPE_CD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">ACCT_CURRENCY_CD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">SESSDS</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">JOB_DIVISION</property>
+                    <property name="nativeName">JOB_DIVISION</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">LOCAL_DESCRIPTION</property>
+                    <property name="nativeName">LOCAL_DESCRIPTION</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">RECORD_ID</property>
+                    <property name="nativeName">RECORD_ID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">KEY_ID</property>
+                    <property name="nativeName">KEY_ID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">ACTION</property>
+                    <property name="nativeName">ACTION</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">FIELD_ID</property>
+                    <property name="nativeName">FIELD_ID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">DATA_ORIGINAL</property>
+                    <property name="nativeName">DATA_ORIGINAL</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">DATA_UPDATE</property>
+                    <property name="nativeName">DATA_UPDATE</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">MAKER_ID</property>
+                    <property name="nativeName">MAKER_ID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">MAKER_TMS</property>
+                    <property name="nativeName">MAKER_TMS</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">REVIEWER_ID</property>
+                    <property name="nativeName">REVIEWER_ID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">REVIEWER_TMS</property>
+                    <property name="nativeName">REVIEWER_TMS</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">APPROVED_TMS</property>
+                    <property name="nativeName">APPROVED_TMS</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">APPROVED_ID</property>
+                    <property name="nativeName">APPROVED_ID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">KEY_DATA</property>
+                    <property name="nativeName">KEY_DATA</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">ENTITY_NO</property>
+                    <property name="nativeName">ENTITY_NO</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">TRANS_CODE</property>
+                    <property name="nativeName">TRANS_CODE</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">TRANS_DESC</property>
+                    <property name="nativeName">TRANS_DESC</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">ACCT_NUMBER</property>
+                    <property name="nativeName">ACCT_NUMBER</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">ACCT_TYPE_CD</property>
+                    <property name="nativeName">ACCT_TYPE_CD</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">ACCT_CURRENCY_CD</property>
+                    <property name="nativeName">ACCT_CURRENCY_CD</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">NAME</property>
+                    <property name="nativeName">NAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[
+             SELECT D.JOB_DIVISION, V.LOCAL_DESCRIPTION, M.RECORD_ID, M.KEY_ID,
+  M.ACTION, M.FIELD_ID, M.DATA_ORIGINAL, M.DATA_UPDATE, M.MAKER_ID,
+  M.MAKER_TMS, M.REVIEWER_ID, M.REVIEWER_TMS, M.APPROVED_TMS, M.APPROVED_ID, M.KEY_DATA, M.ENTITY_NO, m.trans_code, t.trans_desc,  M.ACCT_NUMBER, M.ACCT_TYPE_CD, M.ACCT_CURRENCY_CD, B.NAME
+  FROM EPS_REPORT_MAINTENANCE M INNER JOIN SFS_SYSTEM_USER_DATA D ON M.MAKER_ID = D.USER_ID LEFT OUTER JOIN SFS_DATA_VALUES V ON D.JOB_DIVISION = V.DATA_VALUE LEFT OUTER JOIN EPS_BILLER_PROFILE B ON M.ENTITY_NO = B.biller_entity_no INNER JOIN sfs_transaction_code t ON M.trans_code = T.trans_cd and M.action = T.action_cd
+             ]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;SQLQueryBuilder editorInputType="SQLBuilderStorageEditorInput" name="AUDITDS" version="1.0">
+&lt;SQLStatement>SELECT D.JOB_DIVISION, V.LOCAL_DESCRIPTION, M.RECORD_ID, M.KEY_ID,&amp;#x0A;  M.ACTION, M.FIELD_ID, M.DATA_ORIGINAL, M.DATA_UPDATE, M.MAKER_ID,&amp;#x0A;  M.MAKER_TMS, M.REVIEWER_ID, M.REVIEWER_TMS, M.KEY_DATA&amp;#x0A;  FROM&amp;#x0A;       SFS_DAILY_MAINT_FIRST M INNER JOIN SFS_SYSTEM_USER_DATA D ON M.MAKER_ID = D.USER_ID LEFT OUTER JOIN SFS_DATA_VALUES V ON D.JOB_DIVISION = V.DATA_VALUE&amp;#x0A;UNION ALL&amp;#x0A;SELECT D.JOB_DIVISION, V.LOCAL_DESCRIPTION, M.RECORD_ID, M.KEY_ID,&amp;#x0A;  M.ACTION, M.FIELD_ID, M.DATA_ORIGINAL, M.DATA_UPDATE, M.MAKER_ID,&amp;#x0A;  M.MAKER_TMS, M.REVIEWER_ID, M.REVIEWER_TMS, M.KEY_DATA&amp;#x0A;  FROM&amp;#x0A;       SFS_DAILY_MAINT_SECOND M INNER JOIN SFS_SYSTEM_USER_DATA D ON M.MAKER_ID = D.USER_ID INNER JOIN SFS_DATA_VALUES V ON D.JOB_DIVISION = V.DATA_VALUE&amp;#x0A;&lt;/SQLStatement>
+&lt;connInfo>Oracle_11:Transient.org.eclipse.datatools.enablement.oracle.connectionProfile:SESSDB:opipadm&lt;/connInfo>
+&lt;omitSchemaInfo>false:true:&lt;/omitSchemaInfo>
+&lt;editorInputUsageOptions>useWindowState=true&lt;/editorInputUsageOptions>
+&lt;windowState height="841" version="1.0" width="1703">
+&lt;control height="312" isHideable="true" isVisible="true" name="SQLSourceViewer" width="1678"/>
+&lt;control height="169" isHideable="true" isVisible="true" name="DesignViewer" width="1691"/>
+&lt;control height="328" isHideable="true" isVisible="true" name="GraphControl" width="1683"/>
+&lt;control height="328" isHideable="true" isVisible="false" name="OutlineViewer" width="72"/>
+&lt;/windowState>
+&lt;/SQLQueryBuilder></property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>RECORD_ID</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>RECORD_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>RECORD_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>12</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>JOB_DIVISION</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>40</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>JOB_DIVISION</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>JOB_DIVISION</design:label>
+            <design:formattingHints>
+              <design:displaySize>40</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>USER_ID</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>32</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>USER_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>USER_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>32</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>NAME</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>140</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>NAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>NAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>140</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ACCESS_ID</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ACCESS_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ACCESS_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CLASS_LEVEL</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>9</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CLASS_LEVEL</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CLASS_LEVEL</design:label>
+            <design:formattingHints>
+              <design:displaySize>9</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>MAKER_ID</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>32</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>MAKER_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>MAKER_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>32</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>MAKER_TMS</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>MAKER_TMS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>MAKER_TMS</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CHECKER_ID</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>32</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CHECKER_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CHECKER_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>32</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CHECKER_TMS</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CHECKER_TMS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CHECKER_TMS</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>STATUS</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>9</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>STATUS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>STATUS</design:label>
+            <design:formattingHints>
+              <design:displaySize>9</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>LEGAL_COUNTRY</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>3</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>LEGAL_COUNTRY</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>LEGAL_COUNTRY</design:label>
+            <design:formattingHints>
+              <design:displaySize>3</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria>
+        <design:rowOrdering/>
+      </design:criteria>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile.sqbDataSet" name="BUSINESS_DATE" id="492">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">EOD_LAST</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">EOD_LAST</text-property>
+                    <text-property name="heading">EOD_LAST</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FORMAT_USER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">FORMAT_USER</text-property>
+                    <text-property name="heading">FORMAT_USER</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">EOD_LAST</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">FORMAT_USER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">SESSDS</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">EOD_LAST</property>
+                    <property name="nativeName">EOD_LAST</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">FORMAT_USER</property>
+                    <property name="nativeName">FORMAT_USER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT EOD_LAST, FORMAT_USER
+  FROM SFS_BUSINESS_DATE
+]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;SQLQueryBuilder editorInputType="SQLBuilderStorageEditorInput" name="BUSINESS_DATE" version="1.0">
+&lt;SQLStatement>SELECT EOD_LAST, FORMAT_USER&amp;#x0A;  FROM SFS_BUSINESS_DATE&amp;#x0A;&lt;/SQLStatement>
+&lt;connInfo>Oracle_11:Transient.org.eclipse.datatools.enablement.oracle.connectionProfile:SESSDB:opipadm&lt;/connInfo>
+&lt;omitSchemaInfo>false:true:&lt;/omitSchemaInfo>
+&lt;editorInputUsageOptions>useWindowState=true&lt;/editorInputUsageOptions>
+&lt;windowState height="291" version="1.0" width="583">
+&lt;control height="81" isHideable="true" isVisible="true" name="SQLSourceViewer" width="558"/>
+&lt;control height="95" isHideable="true" isVisible="true" name="DesignViewer" width="571"/>
+&lt;control height="83" isHideable="true" isVisible="true" name="GraphControl" width="563"/>
+&lt;control height="83" isHideable="true" isVisible="false" name="OutlineViewer" width="109"/>
+&lt;/windowState>
+&lt;/SQLQueryBuilder></property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>BUSINESS_CURRENT</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>8</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>BUSINESS_CURRENT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>BUSINESS_CURRENT</design:label>
+            <design:formattingHints>
+              <design:displaySize>9</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria>
+        <design:rowOrdering/>
+      </design:criteria>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile.sqbDataSet" name="SUMMARY" id="792">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">KEY_ID</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">KEY_ID</text-property>
+                    <text-property name="heading">KEY_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ACTION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ACTION</text-property>
+                    <text-property name="heading">ACTION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">COUNTER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">COUNTER</text-property>
+                    <text-property name="heading">COUNTER</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">KEY_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">ACTION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">COUNTER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">SESSDS</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">KEY_ID</property>
+                    <property name="nativeName">KEY_ID</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">ACTION</property>
+                    <property name="nativeName">ACTION</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">COUNTER</property>
+                    <property name="nativeName">COUNTER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select M.KEY_ID, M.ACTION, COUNT(M.RECORD_ID) as COUNTER  FROM
+       EPS_REPORT_MAINTENANCE M INNER JOIN SFS_SYSTEM_USER_DATA D ON M.MAKER_ID = D.USER_ID LEFT OUTER JOIN SFS_DATA_VALUES V ON D.JOB_DIVISION = V.DATA_VALUE
+       group by M.KEY_ID, M.ACTION]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>KEY_ID</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>64</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>KEY_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>KEY_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>64</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ACTION</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ACTION</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ACTION</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>COUNT(M.RECORD_ID)</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>COUNT(M.RECORD_ID)</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>COUNT(M.RECORD_ID)</design:label>
+            <design:formattingHints>
+              <design:displaySize>39</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <cubes>
+        <tabular-cube name="Data Cube" id="32">
+            <property name="dimensions">
+                <tabular-dimension name="GroupJobDivision" id="499">
+                    <property name="defaultHierarchy">NewTabularHierarchy</property>
+                    <property name="hierarchies">
+                        <tabular-hierarchy name="NewTabularHierarchy" id="500">
+                            <property name="levels">
+                                <tabular-level name="JOB_DIVISION" id="501">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">JOB_DIVISION</property>
+                                </tabular-level>
+                            </property>
+                        </tabular-hierarchy>
+                    </property>
+                </tabular-dimension>
+            </property>
+            <property name="dataSet">AUDITDS</property>
+        </tabular-cube>
+    </cubes>
+    <page-setup>
+        <simple-master-page name="SimpleUserMasterPage" id="2">
+            <property name="type">a3</property>
+            <property name="orientation">landscape</property>
+            <page-header>
+                <grid id="467">
+                    <property name="fontFamily">"Courier 10 Pitch"</property>
+                    <property name="fontSize">9pt</property>
+                    <property name="height">0.4375in</property>
+                    <property name="width">15.90625in</property>
+                    <property name="dataSet">BUSINESS_DATE</property>
+                    <list-property name="boundDataColumns">
+                        <structure>
+                            <property name="name">EOD_LAST</property>
+                            <text-property name="displayName">BUSINESS_CURRENT</text-property>
+                            <expression name="expression" type="javascript">dataSetRow["EOD_LAST"]</expression>
+                            <property name="dataType">decimal</property>
+                        </structure>
+                        <structure>
+                            <property name="name">FORMAT_USER</property>
+                            <text-property name="displayName">FORMAT_USER</text-property>
+                            <expression name="expression" type="javascript">dataSetRow["FORMAT_USER"]</expression>
+                            <property name="dataType">string</property>
+                        </structure>
+                        <structure>
+                            <property name="name">Column Binding</property>
+                            <expression name="expression" type="javascript">Formatter.format(new Date(dataSetRow["EOD_LAST"].substr(0,4).replace(",", ""), dataSetRow["EOD_LAST"].substr(5,3).replace("," ,""), dataSetRow["EOD_LAST"].substr(8,3)) ,  dataSetRow["FORMAT_USER"])</expression>
+                            <property name="dataType">string</property>
+                            <property name="allowExport">true</property>
+                        </structure>
+                    </list-property>
+                    <column id="468">
+                        <property name="width">1.7604166666666667in</property>
+                    </column>
+                    <column id="469">
+                        <property name="width">1.7708333333333333in</property>
+                    </column>
+                    <column id="470">
+                        <property name="width">8.541666666666666in</property>
+                    </column>
+                    <column id="471">
+                        <property name="width">2.1145833333333335in</property>
+                    </column>
+                    <column id="472">
+                        <property name="width">0.5in</property>
+                    </column>
+                    <row id="473">
+                        <property name="height">0.17708333333333334in</property>
+                        <cell id="474">
+                            <text id="490">
+                                <property name="textAlign">left</property>
+                                <property name="contentType">plain</property>
+                                <text-property name="content"><![CDATA[Processing Date:]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="475">
+                            <data id="625">
+                                <property name="resultSetColumn">Column Binding</property>
+                            </data>
+                        </cell>
+                        <cell id="476">
+                            <text-data id="629">
+                                <property name="textAlign">center</property>
+                                <expression name="valueExpr">params["BANK_NAME"].value</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                        <cell id="477"/>
+                        <cell id="478"/>
+                    </row>
+                    <row id="479">
+                        <property name="height">0.2604166666666667in</property>
+                        <cell id="480">
+                            <text id="488">
+                                <property name="textAlign">left</property>
+                                <property name="contentType">plain</property>
+                                <text-property name="content"><![CDATA[Printing Date:]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="481">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                            <text id="533">
+                                <property name="textAlign">left</property>
+                                <property name="display">block</property>
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[<value-of>Formatter.format(new Date(), "dd/MM/YYYY HH:mm:ss")</value-of>]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="531">
+                            <text id="489">
+                                <property name="textAlign">center</property>
+                                <property name="contentType">plain</property>
+                                <text-property name="content"><![CDATA[Online Payment Initiator (OPI) - Audit Trail Report]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="483">
+                            <text id="872">
+                                <property name="textAlign">right</property>
+                                <property name="contentType">plain</property>
+                                <text-property name="content"><![CDATA[Page :]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="484">
+                            <grid id="851">
+                                <property name="verticalAlign">top</property>
+                                <column id="852"/>
+                                <column id="853"/>
+                                <column id="854"/>
+                                <row id="855">
+                                    <cell id="856">
+                                        <auto-text id="857">
+                                            <property name="type">page-number</property>
+                                        </auto-text>
+                                    </cell>
+                                    <cell id="858">
+                                        <text id="859">
+                                            <property name="contentType">plain</property>
+                                            <text-property name="content"><![CDATA[of]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="860">
+                                        <auto-text id="861">
+                                            <property name="type">total-page</property>
+                                        </auto-text>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                    </row>
+                </grid>
+            </page-header>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="312">
+            <property name="fontFamily">"Courier 10 Pitch"</property>
+            <property name="fontSize">9pt</property>
+            <property name="marginTop">auto</property>
+            <property name="marginRight">auto</property>
+            <property name="display">inline</property>
+            <property name="masterPage">SimpleUserMasterPage</property>
+            <property name="pageBreakBefore">auto</property>
+            <property name="canShrink">false</property>
+            <property name="width">15.96875in</property>
+            <list-property name="mapRules">
+                <structure>
+                    <expression name="testExpr" type="javascript">row["RECORD_ID"]</expression>
+                    <property name="operator">is-null</property>
+                </structure>
+            </list-property>
+            <property name="dataSet">AUDITDS</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">RECORD_ID</property>
+                    <text-property name="displayName">RECORD_ID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["RECORD_ID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">JOB_DIVISION</property>
+                    <text-property name="displayName">JOB_DIVISION</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["JOB_DIVISION"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">MAKER_ID</property>
+                    <text-property name="displayName">MAKER_ID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MAKER_ID"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">MAKER_TMS</property>
+                    <text-property name="displayName">MAKER_TMS</text-property>
+                    <expression name="expression" type="javascript">Formatter.format(dataSetRow["MAKER_TMS"], "dd/MM/yyyy HH:mm:ss")</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">CHECKER_ID</property>
+                    <text-property name="displayName">CHECKER_ID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["APPROVED_ID"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">CHECKER_TMS</property>
+                    <text-property name="displayName">CHECKER_TMS</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["REVIEWER_TMS"]</expression>
+                    <property name="dataType">date-time</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation_COUNT</property>
+                    <property name="dataType">integer</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Job Division</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">COUNT</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["RECORD_ID"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation_JobDivision</property>
+                    <property name="dataType">string</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Job Division</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">FIRST</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["JOB_DIVISION"] + "-" + row["LOCAL_DESCRIPTION"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation_TOTAL</property>
+                    <property name="dataType">integer</property>
+                    <property name="aggregateFunction">COUNT</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["RECORD_ID"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <expression name="expression" type="javascript">dataSetRow["ACTION"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Action</property>
+                    <expression name="expression" type="javascript">dataSetRow["ACTION"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Checker_tms</property>
+                    <expression name="expression" type="javascript">Formatter.format(dataSetRow["APPROVED_TMS"], "dd/MM/yyyy HH:mm:ss")</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">LOCAL_DESCRIPTION</property>
+                    <text-property name="displayName">LOCAL_DESCRIPTION</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["LOCAL_DESCRIPTION"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">DATA_ORIGINAL</property>
+                    <text-property name="displayName">DATA_ORIGINAL</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DATA_ORIGINAL"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">DATA_UPDATE</property>
+                    <text-property name="displayName">DATA_UPDATE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DATA_UPDATE"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_1</property>
+                    <expression name="expression" type="javascript">dataSetRow["DATA_ORIGINAL"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">DATA</property>
+                    <text-property name="displayName">DATA_UPDATE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DATA_UPDATE"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">KEY_ID</property>
+                    <text-property name="displayName">KEY_ID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KEY_ID"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_2</property>
+                    <expression name="expression" type="javascript">dataSetRow["FIELD_ID"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">KEY_DATA</property>
+                    <text-property name="displayName">KEY_DATA</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KEY_DATA"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_3</property>
+                    <expression name="expression" type="javascript">dataSetRow["KEY_DATA"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_4</property>
+                    <expression name="expression" type="javascript">dataSetRow["ENTITY_NO"] + "/" + dataSetRow["NAME"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">GROUP_ID</property>
+                    <expression name="expression" type="javascript">dataSetRow["TRANS_DESC"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Account</property>
+                    <expression name="expression" type="javascript">dataSetRow["ACCT_NUMBER"]+"/"+dataSetRow["ACCT_TYPE_CD"]+"/"+dataSetRow["ACCT_CURRENCY_CD"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <structure name="toc"/>
+            <property name="repeatHeader">true</property>
+            <column id="378">
+                <property name="width">2.5in</property>
+            </column>
+            <column id="753">
+                <property name="width">2.438in</property>
+            </column>
+            <column id="381">
+                <property name="width">0.5in</property>
+            </column>
+            <column id="382">
+                <property name="width">1.5in</property>
+            </column>
+            <column id="777">
+                <property name="width">1.6in</property>
+            </column>
+            <column id="383">
+                <property name="width">1.6in</property>
+            </column>
+            <column id="386">
+                <property name="width">1.51in</property>
+            </column>
+            <group id="388">
+                <property name="groupName">Job Division</property>
+                <expression name="keyExpr" type="javascript">row["JOB_DIVISION"] + row["KEY_ID"]</expression>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakBefore">always</property>
+                <header>
+                    <row id="535">
+                        <property name="borderBottomStyle">dotted</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderTopStyle">none</property>
+                        <property name="showIfBlank">true</property>
+                        <property name="overflow">visible</property>
+                        <property name="height">0.23958333333333334in</property>
+                        <cell id="536">
+                            <label id="317">
+                                <property name="fontWeight">bold</property>
+                                <property name="borderBottomStyle">none</property>
+                                <property name="borderLeftStyle">none</property>
+                                <property name="borderRightStyle">none</property>
+                                <property name="borderTopStyle">none</property>
+                                <property name="marginLeft">auto</property>
+                                <structure name="toc"/>
+                                <text-property name="text">Division</text-property>
+                            </label>
+                        </cell>
+                        <cell id="744">
+                            <property name="colSpan">5</property>
+                            <property name="rowSpan">1</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderTopStyle">none</property>
+                            <data id="512">
+                                <property name="fontWeight">bold</property>
+                                <property name="borderBottomStyle">none</property>
+                                <property name="borderLeftStyle">none</property>
+                                <property name="borderRightStyle">none</property>
+                                <property name="borderTopStyle">none</property>
+                                <property name="resultSetColumn">Aggregation_JobDivision</property>
+                            </data>
+                        </cell>
+                        <cell id="542"/>
+                    </row>
+                </header>
+            </group>
+            <group id="698">
+                <property name="groupName">Key Group</property>
+                <expression name="keyExpr" type="javascript">row["KEY_ID"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["KEY_ID"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="699">
+                        <cell id="700">
+                            <text id="714">
+                                <property name="contentType">plain</property>
+                                <text-property name="content"><![CDATA[Parameter maintenance type :]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="745">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <data id="713">
+                                <property name="resultSetColumn">KEY_ID</property>
+                            </data>
+                        </cell>
+                        <cell id="769"/>
+                        <cell id="703"/>
+                        <cell id="705"/>
+                    </row>
+                    <row id="722">
+                        <cell id="723">
+                            <text id="729">
+                                <property name="contentType">plain</property>
+                                <text-property name="content"><![CDATA[Entity ID/Name]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="746">
+                            <text id="754">
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[Function]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="724">
+                            <text id="730">
+                                <property name="contentType">plain</property>
+                                <text-property name="content"><![CDATA[Action]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="725">
+                            <text id="742">
+                                <property name="contentType">plain</property>
+                                <text-property name="content"><![CDATA[Field Name]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="770">
+                            <text id="743">
+                                <property name="contentType">plain</property>
+                                <text-property name="content"><![CDATA[Old Value]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="726">
+                            <text id="731">
+                                <property name="contentType">plain</property>
+                                <text-property name="content"><![CDATA[Maker Id]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="728">
+                            <text id="733">
+                                <property name="contentType">plain</property>
+                                <text-property name="content"><![CDATA[Checker Id]]></text-property>
+                            </text>
+                        </cell>
+                    </row>
+                    <row id="735">
+                        <property name="borderBottomStyle">dotted</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <cell id="736">
+                            <label id="781">
+                                <text-property name="text">Account No./Account Type/Currency</text-property>
+                            </label>
+                        </cell>
+                        <cell id="747"/>
+                        <cell id="737"/>
+                        <cell id="738">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                        </cell>
+                        <cell id="771">
+                            <label id="778">
+                                <text-property name="text">New Value</text-property>
+                            </label>
+                        </cell>
+                        <cell id="756">
+                            <text id="732">
+                                <property name="contentType">plain</property>
+                                <text-property name="content"><![CDATA[Maker Date/Time]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="779">
+                            <text id="734">
+                                <property name="contentType">plain</property>
+                                <text-property name="content"><![CDATA[Checker Date/Time]]></text-property>
+                            </text>
+                        </cell>
+                    </row>
+                </header>
+            </group>
+            <detail>
+                <row id="519">
+                    <property name="overflow">visible</property>
+                    <property name="height">0.20833333333333334in</property>
+                    <list-property name="mapRules">
+                        <structure>
+                            <expression name="testExpr" type="javascript">row["Aggregation_COUNT"]</expression>
+                            <property name="operator">le</property>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0</value>
+                            </simple-property-list>
+                            <text-property name="display">* No recound found *</text-property>
+                        </structure>
+                    </list-property>
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">this.row != null</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="520">
+                        <property name="colSpan">7</property>
+                        <property name="rowSpan">1</property>
+                        <text id="528">
+                            <list-property name="visibility">
+                                <structure>
+                                    <property name="format">all</property>
+                                    <expression name="valueExpr" type="javascript">row != null</expression>
+                                </structure>
+                            </list-property>
+                            <property name="contentType">plain</property>
+                            <text-property name="content"><![CDATA[** NO RECORD FOUND **]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="338">
+                    <property name="height">0.20833333333333334in</property>
+                    <cell id="343">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">2</property>
+                        <property name="verticalAlign">top</property>
+                        <data id="697">
+                            <property name="resultSetColumn">Column Binding_4</property>
+                        </data>
+                        <data id="1039">
+                            <property name="resultSetColumn">Account</property>
+                        </data>
+                    </cell>
+                    <cell id="749">
+                        <data id="755">
+                            <property name="resultSetColumn">GROUP_ID</property>
+                        </data>
+                    </cell>
+                    <cell id="349">
+                        <data id="666">
+                            <property name="resultSetColumn">Action</property>
+                        </data>
+                    </cell>
+                    <cell id="351">
+                        <data id="682">
+                            <property name="resultSetColumn">Column Binding_2</property>
+                        </data>
+                    </cell>
+                    <cell id="773">
+                        <data id="668">
+                            <property name="resultSetColumn">Column Binding_1</property>
+                        </data>
+                    </cell>
+                    <cell id="353">
+                        <data id="352">
+                            <property name="resultSetColumn">MAKER_ID</property>
+                        </data>
+                    </cell>
+                    <cell id="359">
+                        <data id="356">
+                            <property name="resultSetColumn">CHECKER_ID</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="554">
+                    <property name="height">0.4895833333333333in</property>
+                    <cell id="750"/>
+                    <cell id="557"/>
+                    <cell id="558">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">1</property>
+                    </cell>
+                    <cell id="774">
+                        <data id="667">
+                            <property name="resultSetColumn">DATA</property>
+                        </data>
+                    </cell>
+                    <cell id="757">
+                        <data id="354">
+                            <property name="resultSetColumn">MAKER_TMS</property>
+                        </data>
+                    </cell>
+                    <cell id="780">
+                        <data id="360">
+                            <property name="resultSetColumn">Checker_tms</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="582">
+                    <property name="height">0.2604166666666667in</property>
+                    <cell id="583">
+                        <property name="colSpan">7</property>
+                        <property name="rowSpan">1</property>
+                        <property name="textAlign">center</property>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+        <table id="990">
+            <property name="fontFamily">"Courier 10 Pitch"</property>
+            <property name="fontSize">9pt</property>
+            <property name="pageBreakAfter">avoid</property>
+            <property name="pageBreakBefore">avoid</property>
+            <property name="pageBreakInside">avoid</property>
+            <property name="width">5.479166666666667in</property>
+            <property name="dataSet">SUMMARY</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">KEY_ID</property>
+                    <text-property name="displayName">KEY_ID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KEY_ID"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ACTION</property>
+                    <text-property name="displayName">ACTION</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ACTION"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">COUNTER</property>
+                    <text-property name="displayName">COUNTER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["COUNTER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">KEYID</property>
+                    <expression name="expression" type="javascript">dataSetRow["KEY_ID"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">ACTIONCOL</property>
+                    <expression name="expression" type="javascript">"ADD ( " + row["SUM_ADD"] + " ) \n" +
+"UPDATE ( " + row["SUM_UPDATE"] + " ) \n" +
+"DELETE ( " + row["SUM_DELETE"] + " ) "</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">COUNTERCOL</property>
+                    <expression name="expression" type="javascript">dataSetRow["COUNTER"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">TOTAL</property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["COUNTER"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">SUM_ADD</property>
+                    <property name="dataType">float</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>KEYID</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["COUNTER"]</expression>
+                        </structure>
+                    </list-property>
+                    <expression name="filterExpr" type="javascript">row["ACTION"] == "*ADD"</expression>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">SUM_UPDATE</property>
+                    <property name="dataType">float</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>KEYID</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["COUNTER"]</expression>
+                        </structure>
+                    </list-property>
+                    <expression name="filterExpr" type="javascript">row["ACTION"] == "*UPDATE"</expression>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">SUM_DELETE</property>
+                    <property name="dataType">float</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>KEYID</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["COUNTER"]</expression>
+                        </structure>
+                    </list-property>
+                    <expression name="filterExpr" type="javascript">row["ACTION"] == "*DELETE"</expression>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">TOTAL_ADD</property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["COUNTER"]</expression>
+                        </structure>
+                    </list-property>
+                    <expression name="filterExpr" type="javascript">row["ACTION"] == "*ADD"</expression>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">TOTAL_UPDATE</property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["COUNTER"]</expression>
+                        </structure>
+                    </list-property>
+                    <expression name="filterExpr" type="javascript">row["ACTION"] == "*UPDATE"</expression>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">TOTAL_DELETE</property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["COUNTER"]</expression>
+                        </structure>
+                    </list-property>
+                    <expression name="filterExpr" type="javascript">row["ACTION"] == "*DELETE"</expression>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">TOTALS</property>
+                    <expression name="expression" type="javascript">"ADD ( " + row["TOTAL_ADD"] + " ) \n" +
+"UPDATE ( " + row["TOTAL_UPDATE"] + " ) \n" +
+"DELETE ( " + row["TOTAL_DELETE"] + " ) "</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <property name="isSummaryTable">true</property>
+            <column id="1002">
+                <property name="width">2.7395833333333335in</property>
+            </column>
+            <column id="1003">
+                <property name="width">2.7395833333333335in</property>
+            </column>
+            <header>
+                <row id="991">
+                    <property name="height">0.28125in</property>
+                    <cell id="992">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="993">
+                            <text-property name="text">Section</text-property>
+                        </label>
+                    </cell>
+                    <cell id="994">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="995">
+                            <text-property name="text">Approved</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <group id="1020">
+                <property name="groupName">KEYID</property>
+                <expression name="keyExpr" type="javascript">row["KEY_ID"]+row["ACTION"]+row["COUNTER"]</expression>
+                <property name="repeatHeader">false</property>
+                <property name="hideDetail">false</property>
+                <footer>
+                    <row id="1030">
+                        <property name="height">0.5253164556962026in</property>
+                        <cell id="1031">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <data id="1019">
+                                <property name="resultSetColumn">KEYID</property>
+                            </data>
+                        </cell>
+                        <cell id="1032">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">thin</property>
+                            <data id="1034">
+                                <property name="resultSetColumn">ACTIONCOL</property>
+                            </data>
+                        </cell>
+                    </row>
+                </footer>
+            </group>
+            <footer>
+                <row id="998">
+                    <property name="height">0.5379746835443038in</property>
+                    <cell id="999">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <text id="1036">
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Total]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="1000">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="1040">
+                            <property name="resultSetColumn">TOTALS</property>
+                        </data>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+        <text id="1035">
+            <property name="fontFamily">"Courier 10 Pitch"</property>
+            <property name="fontSize">9pt</property>
+            <property name="textAlign">center</property>
+            <property name="contentType">plain</property>
+            <text-property name="content"><![CDATA[** END OF REPORT **]]></text-property>
+        </text>
+    </body>
+</report>

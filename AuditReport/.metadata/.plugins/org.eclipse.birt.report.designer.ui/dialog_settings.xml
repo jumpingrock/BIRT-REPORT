@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="Shell {Edit Data Set - SUMMARY}/Shell {AuditReport - sess-report-eps-audit/src/main/resources/EPS_ADT_001P.rptdesign - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP014PJoint}/Shell {AuditReport - target_classes_CGP014P/SFS_CGP_014P.rptdesign - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - CGP014P}/Shell {AuditReport - target_classes_CGP014P/SFS_CGP_014P.rptdesign - Eclipse Platform}">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="9" key="DIALOG_X_ORIGIN"/>
+		<item value="9" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {AuditReport - target_classes_LCGP002X/SFS_ADT_002P.rptdesign - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Data Cube Builder}/Shell {AuditReport - sess-report-eps-audit/src/main/resources/EPS_ADT_001P.rptdesign - Eclipse Platform}">
+		<item value="820" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="656" key="SASHFORM.RIGHT"/>
+		<item value="164" key="SASHFORM.LEFT"/>
+		<item value="600" key="DIALOG_HEIGHT"/>
+		<item value="559" key="DIALOG_X_ORIGIN"/>
+		<item value="124" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Text Item}/Shell {AuditReport - target_classes_CGP014P/SFS_CGP_014P.rptdesign - Eclipse Platform}">
+		<item value="1002" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="561" key="DIALOG_HEIGHT"/>
+		<item value="468" key="DIALOG_X_ORIGIN"/>
+		<item value="150" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Source - SESSDS}/Shell {AuditReport - sess-report-eps-audit/src/main/resources/EPS_ADT_001P.rptdesign - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - LCGP002X}/Shell {AuditReport - target_classes_LCGP002X/SFS_ADT_002P.rptdesign - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - BUSINESS_DATE}/Shell {AuditReport - sess-report-eps-audit/src/main/resources/EPS_ADT_001P.rptdesign - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Edit Data Set - AUDITDS}/Shell {AuditReport - sess-report-eps-audit/src/main/resources/EPS_ADT_001P.rptdesign - Eclipse Platform}">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="640" key="SASHFORM.RIGHT"/>
+		<item value="160" key="SASHFORM.LEFT"/>
+		<item value="500" key="DIALOG_HEIGHT"/>
+		<item value="569" key="DIALOG_X_ORIGIN"/>
+		<item value="191" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="Shell {Select Data Binding}/Shell {AuditReport - target_classes_CGP014P/SFS_CGP_014P.rptdesign - Eclipse Platform}">
+		<item value="1008" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="476" key="DIALOG_HEIGHT"/>
+		<item value="465" key="DIALOG_X_ORIGIN"/>
+		<item value="207" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>
