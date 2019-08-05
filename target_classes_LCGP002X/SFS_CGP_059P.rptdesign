@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="author">Kevin</property>
+    <property name="author">KENNETH</property>
     <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
     <text-property name="title">USER LISTING REPORT</text-property>
     <html-property name="description">This report lists all users by division.</html-property>
@@ -42,7 +42,7 @@
             <property name="dataType">string</property>
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
-                <value type="constant">UOB BANK SINGAPORE</value>
+                <value type="constant">UOB (SG) SYSTEM</value>
             </simple-property-list>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>
@@ -58,7 +58,7 @@
             <property name="dataType">string</property>
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
-                <value type="constant">SFS_CAI_002P</value>
+                <value type="constant">EPSP059P</value>
             </simple-property-list>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>
@@ -67,7 +67,7 @@
                 <property name="category">Unformatted</property>
             </structure>
         </scalar-parameter>
-        <scalar-parameter name="PROCESSING_DATE" id="3640">
+        <scalar-parameter name="CLEARING_DATE" id="3640">
             <property name="valueType">static</property>
             <property name="dataType">date</property>
             <property name="distinct">true</property>
@@ -128,7 +128,7 @@
             <property name="odaUser">sesuser</property>
             <encrypted-property name="odaPassword" encryptionID="base64">c2VzdXNlcg==</encrypted-property>
         </oda-data-source>
-        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="CGP059P" id="3642">
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="OPI" id="3642">
             <list-property name="privateDriverProperties">
                 <ex-property>
                     <name>metadataBidiFormatStr</name>
@@ -829,7 +829,7 @@
                     <structure>
                         <property name="position">10</property>
                         <property name="name">VALUE_DT</property>
-                        <property name="dataType">decimal</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">11</property>
@@ -838,7 +838,7 @@
                     </structure>
                 </list-property>
             </structure>
-            <property name="dataSource">CGP059P</property>
+            <property name="dataSource">OPI</property>
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
@@ -907,7 +907,7 @@
                     <property name="position">10</property>
                     <property name="name">VALUE_DT</property>
                     <property name="nativeName">VALUE_DT</property>
-                    <property name="dataType">decimal</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
@@ -1189,7 +1189,7 @@ from OPI.EPS_OUTWARD_HEADER]]></xml-property>
                     </structure>
                 </list-property>
             </structure>
-            <property name="dataSource">CGP059P</property>
+            <property name="dataSource">OPI</property>
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
@@ -1293,7 +1293,7 @@ from OPI.SFS_BIC]]></xml-property>
   </design:ResultSets>
 </model:DesignValues>]]></xml-property>
         </oda-data-set>
-        <joint-data-set name="CGP059PBANKNAME" id="3897">
+        <joint-data-set name="CGP_BIZ_BANKNAME" id="3897">
             <list-property name="columnHints">
                 <structure>
                     <property name="columnName">BANKBIC::LOCAL_NAME</property>
@@ -1301,6 +1301,300 @@ from OPI.SFS_BIC]]></xml-property>
                     <property name="analysis">dimension</property>
                     <text-property name="displayName">BANKBIC::LOCAL_NAME</text-property>
                 </structure>
+                <structure>
+                    <property name="columnName">CGP_BIZ::CGP059P::OA_BANK_BIC</property>
+                    <property name="alias">CGP059P::OA_BANK_BIC</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP_BIZ::CGP059P::OA_BANK_BIC</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP_BIZ::CGP059P::ORIGINAL_TOTAL_CNT</property>
+                    <property name="alias">CGP059P::ORIGINAL_TOTAL_CNT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CGP_BIZ::CGP059P::ORIGINAL_TOTAL_CNT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP_BIZ::CGP059P::RETURNED_REMARK</property>
+                    <property name="alias">CGP059P::RETURNED_REMARK</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP_BIZ::CGP059P::RETURNED_REMARK</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP_BIZ::CGP059P::INTERFACE_ENTITY</property>
+                    <property name="alias">CGP059P::INTERFACE_ENTITY</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CGP_BIZ::CGP059P::INTERFACE_ENTITY</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP_BIZ::CGP059P::ORIGINAL_TOTAL_AMT</property>
+                    <property name="alias">CGP059P::ORIGINAL_TOTAL_AMT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CGP_BIZ::CGP059P::ORIGINAL_TOTAL_AMT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP_BIZ::BUSINESSDATE::EOD_LAST</property>
+                    <property name="alias">BUSINESSDATE::EOD_LAST</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CGP_BIZ::BUSINESSDATE::EOD_LAST</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BANKBIC::BANK_BIC</property>
+                    <property name="alias">BANK_BIC</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">BANKBIC::BANK_BIC</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP_BIZ::CGP059P::VALUE_DT</property>
+                    <property name="alias">CGP059P::VALUE_DT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CGP_BIZ::CGP059P::VALUE_DT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP_BIZ::BUSINESSDATE::FORMAT_USER</property>
+                    <property name="alias">BUSINESSDATE::FORMAT_USER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP_BIZ::BUSINESSDATE::FORMAT_USER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP_BIZ::CGP059P::TRANSACTION_TYPE</property>
+                    <property name="alias">CGP059P::TRANSACTION_TYPE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP_BIZ::CGP059P::TRANSACTION_TYPE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP_BIZ::CGP059P::OA_NUMBER</property>
+                    <property name="alias">CGP059P::OA_NUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP_BIZ::CGP059P::OA_NUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP_BIZ::CGP059P::ORIGINAL_SOURCE</property>
+                    <property name="alias">CGP059P::ORIGINAL_SOURCE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP_BIZ::CGP059P::ORIGINAL_SOURCE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP_BIZ::CGP059P::OA_NAME</property>
+                    <property name="alias">CGP059P::OA_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP_BIZ::CGP059P::OA_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP_BIZ::CGP059P::PROCCESSING_MODE</property>
+                    <property name="alias">CGP059P::PROCCESSING_MODE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP_BIZ::CGP059P::PROCCESSING_MODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BANKBIC::BANK_NAME</property>
+                    <property name="alias">BANK_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">BANKBIC::BANK_NAME</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">CGP059P::ORIGINAL_SOURCE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CGP059P::OA_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">CGP059P::OA_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">CGP059P::OA_BANK_BIC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">CGP059P::INTERFACE_ENTITY</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">CGP059P::PROCCESSING_MODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">CGP059P::TRANSACTION_TYPE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">CGP059P::ORIGINAL_TOTAL_AMT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">CGP059P::ORIGINAL_TOTAL_CNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">CGP059P::VALUE_DT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">CGP059P::RETURNED_REMARK</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">BUSINESSDATE::EOD_LAST</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">BUSINESSDATE::FORMAT_USER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">BANK_BIC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">BANK_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">LOCAL_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <simple-property-list name="dataSets">
+                <value>CGP_BIZ</value>
+                <value>BANKBIC</value>
+            </simple-property-list>
+            <list-property name="joinConditions">
+                <structure>
+                    <property name="joinType">inner</property>
+                    <property name="joinOperator">eq</property>
+                    <property name="leftDataSet">CGP_BIZ</property>
+                    <property name="rightDataSet">BANKBIC</property>
+                    <expression name="leftExpression">dataSetRow["OA_BANK_BIC"]</expression>
+                    <expression name="rightExpression">dataSetRow["BANK_BIC"]</expression>
+                </structure>
+            </list-property>
+        </joint-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="BUSINESSDATE" id="4155">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">EOD_LAST</property>
+                    <text-property name="displayName">EOD_LAST</text-property>
+                    <text-property name="heading">EOD_LAST</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FORMAT_USER</property>
+                    <text-property name="displayName">FORMAT_USER</text-property>
+                    <text-property name="heading">FORMAT_USER</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">EOD_LAST</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">FORMAT_USER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">OPI</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">EOD_LAST</property>
+                    <property name="nativeName">EOD_LAST</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">FORMAT_USER</property>
+                    <property name="nativeName">FORMAT_USER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select 
+OPI.SFS_BUSINESS_DATE.EOD_LAST,
+OPI.SFS_BUSINESS_DATE.FORMAT_USER
+from OPI.SFS_BUSINESS_DATE]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>EOD_LAST</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>8</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>EOD_LAST</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>EOD_LAST</design:label>
+            <design:formattingHints>
+              <design:displaySize>9</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FORMAT_USER</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>FORMAT_USER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FORMAT_USER</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <joint-data-set name="CGP_BIZ" id="4164">
+            <list-property name="columnHints">
                 <structure>
                     <property name="columnName">CGP059P::OA_BANK_BIC</property>
                     <property name="alias">OA_BANK_BIC</property>
@@ -1362,22 +1656,22 @@ from OPI.SFS_BIC]]></xml-property>
                     <text-property name="displayName">CGP059P::ORIGINAL_TOTAL_AMT</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">BANKBIC::BANK_BIC</property>
-                    <property name="alias">BANK_BIC</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">BANKBIC::BANK_BIC</text-property>
-                </structure>
-                <structure>
                     <property name="columnName">CGP059P::INTERFACE_ENTITY</property>
                     <property name="alias">INTERFACE_ENTITY</property>
                     <property name="analysis">measure</property>
                     <text-property name="displayName">CGP059P::INTERFACE_ENTITY</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">BANKBIC::BANK_NAME</property>
-                    <property name="alias">BANK_NAME</property>
+                    <property name="columnName">BUSINESSDATE::FORMAT_USER</property>
+                    <property name="alias">FORMAT_USER</property>
                     <property name="analysis">dimension</property>
-                    <text-property name="displayName">BANKBIC::BANK_NAME</text-property>
+                    <text-property name="displayName">BUSINESSDATE::FORMAT_USER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BUSINESSDATE::EOD_LAST</property>
+                    <property name="alias">EOD_LAST</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">BUSINESSDATE::EOD_LAST</text-property>
                 </structure>
             </list-property>
             <structure name="cachedMetaData">
@@ -1439,33 +1733,28 @@ from OPI.SFS_BIC]]></xml-property>
                     </structure>
                     <structure>
                         <property name="position">12</property>
-                        <property name="name">BANK_BIC</property>
-                        <property name="dataType">string</property>
+                        <property name="name">EOD_LAST</property>
+                        <property name="dataType">decimal</property>
                     </structure>
                     <structure>
                         <property name="position">13</property>
-                        <property name="name">BANK_NAME</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">14</property>
-                        <property name="name">LOCAL_NAME</property>
+                        <property name="name">FORMAT_USER</property>
                         <property name="dataType">string</property>
                     </structure>
                 </list-property>
             </structure>
             <simple-property-list name="dataSets">
                 <value>CGP059P</value>
-                <value>BANKBIC</value>
+                <value>BUSINESSDATE</value>
             </simple-property-list>
             <list-property name="joinConditions">
                 <structure>
                     <property name="joinType">inner</property>
                     <property name="joinOperator">eq</property>
                     <property name="leftDataSet">CGP059P</property>
-                    <property name="rightDataSet">BANKBIC</property>
-                    <expression name="leftExpression">dataSetRow["OA_BANK_BIC"]</expression>
-                    <expression name="rightExpression">dataSetRow["BANK_BIC"]</expression>
+                    <property name="rightDataSet">BUSINESSDATE</property>
+                    <expression name="leftExpression">dataSetRow["VALUE_DT"]</expression>
+                    <expression name="rightExpression">dataSetRow["EOD_LAST"]</expression>
                 </structure>
             </list-property>
         </joint-data-set>
@@ -1547,11 +1836,16 @@ from OPI.SFS_BIC]]></xml-property>
                     <row id="1569">
                         <property name="height">0.20833333333333334in</property>
                         <cell id="1570">
-                            <text id="1493">
-                                <property name="textAlign">left</property>
-                                <property name="contentType">auto</property>
-                                <text-property name="content"><![CDATA[CGP059P]]></text-property>
-                            </text>
+                            <data id="4163">
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">REPORT_NAME</property>
+                                        <expression name="expression" type="javascript">params["REPORT_NAME"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">REPORT_NAME</property>
+                            </data>
                         </cell>
                         <cell id="1571"/>
                         <cell id="1572"/>
@@ -1559,11 +1853,17 @@ from OPI.SFS_BIC]]></xml-property>
                         <cell id="1574">
                             <property name="colSpan">6</property>
                             <property name="rowSpan">1</property>
-                            <text id="1497">
+                            <data id="4162">
                                 <property name="textAlign">center</property>
-                                <property name="contentType">auto</property>
-                                <text-property name="content"><![CDATA[UOB (SG) SYSTEM - LCG]]></text-property>
-                            </text>
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">BANK_NAME</property>
+                                        <expression name="expression" type="javascript">params["BANK_NAME"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">BANK_NAME</property>
+                            </data>
                         </cell>
                         <cell id="1580"/>
                         <cell id="1581"/>
@@ -1616,7 +1916,7 @@ from OPI.SFS_BIC]]></xml-property>
                             <text id="1500">
                                 <property name="textAlign">center</property>
                                 <property name="contentType">auto</property>
-                                <text-property name="content"><![CDATA[LCG – CLEARING REMINDER]]></text-property>
+                                <text-property name="content"><![CDATA[CLEARING REMINDER]]></text-property>
                             </text>
                         </cell>
                         <cell id="1595">
@@ -1633,19 +1933,20 @@ from OPI.SFS_BIC]]></xml-property>
                             </text>
                         </cell>
                         <cell id="3365">
-                            <data id="3641">
-                                <structure name="dateTimeFormat">
-                                    <property name="category">Short Date</property>
-                                    <property name="pattern">Short Date</property>
-                                </structure>
+                            <data id="4165">
+                                <property name="dataSet">CGP_BIZ_BANKNAME</property>
                                 <list-property name="boundDataColumns">
                                     <structure>
-                                        <property name="name">PROCESSING_DATE</property>
-                                        <expression name="expression" type="javascript">params["PROCESSING_DATE"]</expression>
-                                        <property name="dataType">date</property>
+                                        <property name="name">BUSINESSDATE::EOD_LAST</property>
+                                        <text-property name="displayName">CGP_BIZ::BUSINESSDATE::EOD_LAST</text-property>
+                                        <expression name="expression" type="javascript">//dataSetRow["BUSINESSDATE::EOD_LAST"]&#13;
+&#13;
+Formatter.format(new Date(dataSetRow["BUSINESSDATE::EOD_LAST"].substr(0,5).replace(",", ""), parseInt(dataSetRow["BUSINESSDATE::EOD_LAST"].substr(5,3).replace(",", "")) - 1, dataSetRow["BUSINESSDATE::EOD_LAST"].substr(8,2).replace(",", "")),  dataSetRow["BUSINESSDATE::FORMAT_USER"])</expression>
+                                        <property name="dataType">string</property>
+                                        <property name="allowExport">true</property>
                                     </structure>
                                 </list-property>
-                                <property name="resultSetColumn">PROCESSING_DATE</property>
+                                <property name="resultSetColumn">BUSINESSDATE::EOD_LAST</property>
                             </data>
                         </cell>
                     </row>
@@ -1684,73 +1985,87 @@ from OPI.SFS_BIC]]></xml-property>
     </page-setup>
     <body>
         <table id="3707">
-            <property name="dataSet">CGP059PBANKNAME</property>
+            <property name="dataSet">CGP_BIZ_BANKNAME</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">OA_BANK_BIC</property>
                     <text-property name="displayName">CGP059P::OA_BANK_BIC</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["OA_BANK_BIC"]</expression>
+                    <expression name="expression" type="javascript">dataSetRow["CGP059P::OA_BANK_BIC"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">ORIGINAL_SOURCE</property>
                     <text-property name="displayName">CGP059P::ORIGINAL_SOURCE</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ORIGINAL_SOURCE"]</expression>
+                    <expression name="expression" type="javascript">dataSetRow["CGP059P::ORIGINAL_SOURCE"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">OA_NUMBER</property>
                     <text-property name="displayName">CGP059P::OA_NUMBER</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["OA_NUMBER"]</expression>
+                    <expression name="expression" type="javascript">dataSetRow["CGP059P::OA_NUMBER"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">OA_NAME</property>
                     <text-property name="displayName">CGP059P::OA_NAME</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["OA_NAME"]</expression>
+                    <expression name="expression" type="javascript">dataSetRow["CGP059P::OA_NAME"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">INTERFACE_ENTITY</property>
                     <text-property name="displayName">CGP059P::INTERFACE_ENTITY</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["INTERFACE_ENTITY"]</expression>
+                    <expression name="expression" type="javascript">dataSetRow["CGP059P::INTERFACE_ENTITY"]</expression>
                     <property name="dataType">decimal</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">VALUE_DT</property>
                     <text-property name="displayName">CGP059P::VALUE_DT</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["VALUE_DT"]</expression>
-                    <property name="dataType">decimal</property>
+                    <expression name="expression" type="javascript">//dataSetRow["CGP059P::VALUE_DT"]&#13;
+&#13;
+&#13;
+Formatter.format(new Date(dataSetRow["CGP059P::VALUE_DT"].substr(0,5).replace(",", ""), parseInt(dataSetRow["CGP059P::VALUE_DT"].substr(5,3).replace(",", "")) - 1, dataSetRow["CGP059P::VALUE_DT"].substr(8,2).replace(",", "")),  dataSetRow["BUSINESSDATE::FORMAT_USER"])</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">PROCCESSING_MODE</property>
                     <text-property name="displayName">CGP059P::PROCCESSING_MODE</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["PROCCESSING_MODE"]</expression>
+                    <expression name="expression" type="javascript">dataSetRow["CGP059P::PROCCESSING_MODE"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">TRANSACTION_TYPE</property>
                     <text-property name="displayName">CGP059P::TRANSACTION_TYPE</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["TRANSACTION_TYPE"]</expression>
+                    <expression name="expression" type="javascript">dataSetRow["CGP059P::TRANSACTION_TYPE"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">ORIGINAL_TOTAL_CNT</property>
                     <text-property name="displayName">CGP059P::ORIGINAL_TOTAL_CNT</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ORIGINAL_TOTAL_CNT"]</expression>
+                    <expression name="expression" type="javascript">dataSetRow["CGP059P::ORIGINAL_TOTAL_CNT"]</expression>
                     <property name="dataType">decimal</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">ORIGINAL_TOTAL_AMT</property>
                     <text-property name="displayName">CGP059P::ORIGINAL_TOTAL_AMT</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ORIGINAL_TOTAL_AMT"]</expression>
+                    <expression name="expression" type="javascript">dataSetRow["CGP059P::ORIGINAL_TOTAL_AMT"]</expression>
                     <property name="dataType">decimal</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">RETURNED_REMARK</property>
                     <text-property name="displayName">CGP059P::RETURNED_REMARK</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["RETURNED_REMARK"]</expression>
+                    <expression name="expression" type="javascript">dataSetRow["CGP059P::RETURNED_REMARK"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">Column Binding</property>
@@ -1783,6 +2098,9 @@ from OPI.SFS_BIC]]></xml-property>
                     <property name="name">Aggregation</property>
                     <text-property name="displayName">seqno</text-property>
                     <property name="dataType">integer</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>OABIC</value>
+                    </simple-property-list>
                     <property name="aggregateFunction">RUNNINGCOUNT</property>
                     <list-property name="arguments">
                         <structure>
@@ -1867,36 +2185,16 @@ from OPI.SFS_BIC]]></xml-property>
                 <header>
                     <row id="3859">
                         <cell id="3860">
-                            <property name="colSpan">2</property>
+                            <property name="colSpan">3</property>
                             <property name="rowSpan">1</property>
-                            <text id="3890">
-                                <property name="contentType">auto</property>
-                                <text-property name="content"><![CDATA[OA BIC - BANK NAME: ]]></text-property>
-                            </text>
+                            <data id="4130">
+                                <property name="resultSetColumn">OA_BANK_BIC</property>
+                            </data>
                         </cell>
-                        <cell id="3862">
-                            <property name="colSpan">5</property>
-                            <property name="rowSpan">1</property>
-                            <grid id="3910">
-                                <property name="width">3.95in</property>
-                                <column id="3911">
-                                    <property name="width">1.5333333333333334in</property>
-                                </column>
-                                <column id="3912"/>
-                                <row id="3913">
-                                    <cell id="3914">
-                                        <data id="4130">
-                                            <property name="resultSetColumn">OA_BANK_BIC</property>
-                                        </data>
-                                    </cell>
-                                    <cell id="3915">
-                                        <data id="4151">
-                                            <property name="resultSetColumn">BANK_NAME</property>
-                                        </data>
-                                    </cell>
-                                </row>
-                            </grid>
-                        </cell>
+                        <cell id="4157"/>
+                        <cell id="4158"/>
+                        <cell id="4159"/>
+                        <cell id="4160"/>
                         <cell id="4108"/>
                         <cell id="3867"/>
                         <cell id="3868"/>
@@ -1907,7 +2205,12 @@ from OPI.SFS_BIC]]></xml-property>
                         <cell id="3873"/>
                     </row>
                     <row id="3918">
-                        <cell id="3919"/>
+                        <cell id="3919">
+                            <text id="4161">
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[  ]]></text-property>
+                            </text>
+                        </cell>
                         <cell id="3920"/>
                         <cell id="3921"/>
                         <cell id="3922"/>
@@ -2006,7 +2309,7 @@ from OPI.SFS_BIC]]></xml-property>
                             <property name="colSpan">15</property>
                             <property name="rowSpan">1</property>
                             <property name="borderTopStyle">solid</property>
-                            <property name="borderTopWidth">medium</property>
+                            <property name="borderTopWidth">thin</property>
                         </cell>
                     </row>
                 </header>

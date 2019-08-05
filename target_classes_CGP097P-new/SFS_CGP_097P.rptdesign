@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="author">Kevin</property>
+    <property name="author">KENNETH</property>
     <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
     <text-property name="title">USER LISTING REPORT</text-property>
     <html-property name="description">This report lists all users by division.</html-property>
@@ -62,7 +62,7 @@ ACTCAMT = 0;]]></method>
             <property name="dataType">string</property>
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
-                <value type="constant">CGP097P</value>
+                <value type="constant">EPSP097P</value>
             </simple-property-list>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>
@@ -151,6 +151,20 @@ ACTCAMT = 0;]]></method>
                 <property name="category">Unformatted</property>
             </structure>
         </scalar-parameter>
+        <scalar-parameter name="ORGINATING_SOURCE" id="5282">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">SOURCE</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
     </parameters>
     <data-sources>
         <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="SESSDS" id="611">
@@ -197,7 +211,7 @@ ACTCAMT = 0;]]></method>
             <property name="odaUser">sesuser</property>
             <encrypted-property name="odaPassword" encryptionID="base64">c2VzdXNlcg==</encrypted-property>
         </oda-data-source>
-        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="CGP060P" id="3642">
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="OPI" id="3642">
             <list-property name="privateDriverProperties">
                 <ex-property>
                     <name>metadataBidiFormatStr</name>
@@ -895,17 +909,6 @@ ACTCAMT = 0;]]></method>
                     <property name="isInput">true</property>
                     <property name="isOutput">false</property>
                 </structure>
-                <structure>
-                    <property name="name">OA_NUMBER</property>
-                    <property name="paramName">OA_NUMBER</property>
-                    <property name="nativeName"></property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                    <property name="position">3</property>
-                    <property name="allowNull">false</property>
-                    <property name="isInput">true</property>
-                    <property name="isOutput">false</property>
-                </structure>
             </list-property>
             <structure name="cachedMetaData">
                 <list-property name="resultSet">
@@ -986,7 +989,7 @@ ACTCAMT = 0;]]></method>
                     </structure>
                 </list-property>
             </structure>
-            <property name="dataSource">CGP060P</property>
+            <property name="dataSource">OPI</property>
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
@@ -1113,7 +1116,7 @@ OPI.EPS_OUTWARD_HEADER.FILE_ENTITY_PROCESS_STATUS
 
 from OPI.EPS_OUTWARD_HEADER WHERE  OPI.EPS_OUTWARD_HEADER.VALUE_DT LIKE ? 
 and OPI.EPS_OUTWARD_HEADER.ENTITY_STATUS LIKE ?
-and OPI.EPS_OUTWARD_HEADER.OA_NUMBER LIKE ?
+
 ]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
@@ -1374,7 +1377,7 @@ and OPI.EPS_OUTWARD_HEADER.OA_NUMBER LIKE ?
                     </structure>
                 </list-property>
             </structure>
-            <property name="dataSource">CGP060P</property>
+            <property name="dataSource">OPI</property>
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
@@ -1469,6 +1472,108 @@ from OPI.SFS_BIC]]></xml-property>
             <design:label>LOCAL_NAME</design:label>
             <design:formattingHints>
               <design:displaySize>140</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="BUSINESSDATE" id="5283">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">EOD_LAST</property>
+                    <text-property name="displayName">EOD_LAST</text-property>
+                    <text-property name="heading">EOD_LAST</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FORMAT_USER</property>
+                    <text-property name="displayName">FORMAT_USER</text-property>
+                    <text-property name="heading">FORMAT_USER</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">EOD_LAST</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">FORMAT_USER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">OPI</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">EOD_LAST</property>
+                    <property name="nativeName">EOD_LAST</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">FORMAT_USER</property>
+                    <property name="nativeName">FORMAT_USER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select 
+OPI.SFS_BUSINESS_DATE.EOD_LAST,
+OPI.SFS_BUSINESS_DATE.FORMAT_USER
+from OPI.SFS_BUSINESS_DATE]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>EOD_LAST</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>8</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>EOD_LAST</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>EOD_LAST</design:label>
+            <design:formattingHints>
+              <design:displaySize>9</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FORMAT_USER</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>FORMAT_USER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FORMAT_USER</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
             </design:formattingHints>
           </design:usageHints>
         </design:resultColumnDefinitions>

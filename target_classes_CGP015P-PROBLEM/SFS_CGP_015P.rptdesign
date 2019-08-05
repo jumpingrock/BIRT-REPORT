@@ -189,7 +189,7 @@ ACTCAMT = 0;]]></method>
             <property name="odaUser">sesuser</property>
             <encrypted-property name="odaPassword" encryptionID="base64">c2VzdXNlcg==</encrypted-property>
         </oda-data-source>
-        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="CGP015P" id="3642">
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="OPI" id="3642">
             <list-property name="privateDriverProperties">
                 <ex-property>
                     <name>metadataBidiFormatStr</name>
@@ -901,7 +901,7 @@ ACTCAMT = 0;]]></method>
                     </structure>
                 </list-property>
             </structure>
-            <property name="dataSource">CGP015P</property>
+            <property name="dataSource">OPI</property>
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
@@ -1267,7 +1267,7 @@ from OPI.EPS_OUTWARD_HEADER where OPI.EPS_OUTWARD_HEADER.ENTITY_STATUS = ?]]></x
                     </structure>
                 </list-property>
             </structure>
-            <property name="dataSource">CGP015P</property>
+            <property name="dataSource">OPI</property>
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
@@ -1502,7 +1502,7 @@ from OPI.SFS_BIC]]></xml-property>
                     </structure>
                 </list-property>
             </structure>
-            <property name="dataSource">CGP015P</property>
+            <property name="dataSource">OPI</property>
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
@@ -2332,7 +2332,7 @@ from OPI.EPS_OUTWARD_ITEM WHERE OPI.EPS_OUTWARD_ITEM.TRANS_STATUS = ?]]></xml-pr
                     </structure>
                 </list-property>
             </structure>
-            <property name="dataSource">CGP015P</property>
+            <property name="dataSource">OPI</property>
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>

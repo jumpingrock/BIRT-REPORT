@@ -35,7 +35,7 @@ gotPage = 0;]]></method>
             <property name="dataType">string</property>
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
-                <value type="constant">UOB BANK SINGAPORE</value>
+                <value type="constant">UOB (SG) SYSTEM</value>
             </simple-property-list>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>
@@ -51,7 +51,7 @@ gotPage = 0;]]></method>
             <property name="dataType">string</property>
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
-                <value type="constant">SFS_CAI_002P</value>
+                <value type="constant">EPSP014P</value>
             </simple-property-list>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>
@@ -61,6 +61,7 @@ gotPage = 0;]]></method>
             </structure>
         </scalar-parameter>
         <scalar-parameter name="PROCESSING_DATE" id="3467">
+            <property name="hidden">true</property>
             <property name="valueType">static</property>
             <property name="dataType">date</property>
             <property name="distinct">true</property>
@@ -778,6 +779,12 @@ gotPage = 0;]]></method>
                     <text-property name="displayName">INPUT_SOURCE</text-property>
                     <text-property name="heading">INPUT_SOURCE</text-property>
                 </structure>
+                <structure>
+                    <property name="columnName">LAST_PROCESSED_DT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">LAST_PROCESSED_DT</text-property>
+                    <text-property name="heading">LAST_PROCESSED_DT</text-property>
+                </structure>
             </list-property>
             <list-property name="parameters"/>
             <structure name="cachedMetaData">
@@ -834,6 +841,11 @@ gotPage = 0;]]></method>
                     </structure>
                     <structure>
                         <property name="position">11</property>
+                        <property name="name">LAST_PROCESSED_DT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
                         <property name="name">seq_no</property>
                         <property name="dataType">integer</property>
                     </structure>
@@ -913,6 +925,13 @@ gotPage = 0;]]></method>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">LAST_PROCESSED_DT</property>
+                    <property name="nativeName">LAST_PROCESSED_DT</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
             </list-property>
             <xml-property name="queryText"><![CDATA[select RA_BIC,
 OA_NUMBER,
@@ -923,7 +942,8 @@ RA_NAME,
 APPLICANT_ID_NO,
 MANDATE_REF,
 LIMIT_AMOUNT,
-INPUT_SOURCE
+INPUT_SOURCE,
+LAST_PROCESSED_DT
 from OPI.EPS_DDA_MANDATE]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
@@ -1401,16 +1421,26 @@ from OPI.SFS_BIC]]></xml-property>
                     </structure>
                     <structure>
                         <property name="position">11</property>
+                        <property name="name">CGP014P::LAST_PROCESSED_DT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">CGP014P::seq_no</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
                         <property name="name">BANK_BIC</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">12</property>
+                        <property name="position">14</property>
                         <property name="name">BANK_NAME</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">13</property>
+                        <property name="position">15</property>
                         <property name="name">LOCAL_SHORTNAME</property>
                         <property name="dataType">string</property>
                     </structure>
@@ -1428,6 +1458,317 @@ from OPI.SFS_BIC]]></xml-property>
                     <property name="rightDataSet">BankBIC</property>
                     <expression name="leftExpression">dataSetRow["RA_BIC"]</expression>
                     <expression name="rightExpression">dataSetRow["BANK_BIC"]</expression>
+                </structure>
+            </list-property>
+        </joint-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="BUSINESSDATE" id="3557">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">EOD_LAST</property>
+                    <text-property name="displayName">EOD_LAST</text-property>
+                    <text-property name="heading">EOD_LAST</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FORMAT_USER</property>
+                    <text-property name="displayName">FORMAT_USER</text-property>
+                    <text-property name="heading">FORMAT_USER</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">EOD_LAST</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">FORMAT_USER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">OPI</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">EOD_LAST</property>
+                    <property name="nativeName">EOD_LAST</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">FORMAT_USER</property>
+                    <property name="nativeName">FORMAT_USER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select 
+OPI.SFS_BUSINESS_DATE.EOD_LAST,
+OPI.SFS_BUSINESS_DATE.FORMAT_USER
+from OPI.SFS_BUSINESS_DATE]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>EOD_LAST</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>8</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>EOD_LAST</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>EOD_LAST</design:label>
+            <design:formattingHints>
+              <design:displaySize>9</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FORMAT_USER</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>FORMAT_USER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FORMAT_USER</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <joint-data-set name="CGPBICBIZ" id="3558">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">CGP014PJoint::CGP014P::OA_NAME</property>
+                    <property name="alias">CGP014P::OA_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::OA_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP014PJoint::BankBIC::BANK_NAME</property>
+                    <property name="alias">BankBIC::BANK_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP014PJoint::BankBIC::BANK_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP014PJoint::CGP014P::RA_BIC</property>
+                    <property name="alias">CGP014P::RA_BIC</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::RA_BIC</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP014PJoint::CGP014P::RA_NAME</property>
+                    <property name="alias">CGP014P::RA_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::RA_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP014PJoint::BankBIC::LOCAL_SHORTNAME</property>
+                    <property name="alias">BankBIC::LOCAL_SHORTNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP014PJoint::BankBIC::LOCAL_SHORTNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP014PJoint::CGP014P::RA_NUMBER</property>
+                    <property name="alias">CGP014P::RA_NUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::RA_NUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP014PJoint::CGP014P::LAST_PROCESSED_DT</property>
+                    <property name="alias">CGP014P::LAST_PROCESSED_DT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::LAST_PROCESSED_DT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP014PJoint::CGP014P::LIMIT_AMOUNT</property>
+                    <property name="alias">CGP014P::LIMIT_AMOUNT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::LIMIT_AMOUNT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BUSINESSDATE::FORMAT_USER</property>
+                    <property name="alias">FORMAT_USER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">BUSINESSDATE::FORMAT_USER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP014PJoint::CGP014P::MANDATE_REF</property>
+                    <property name="alias">CGP014P::MANDATE_REF</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::MANDATE_REF</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP014PJoint::CGP014P::INPUT_SOURCE</property>
+                    <property name="alias">CGP014P::INPUT_SOURCE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::INPUT_SOURCE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP014PJoint::CGP014P::OA_BIC</property>
+                    <property name="alias">CGP014P::OA_BIC</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::OA_BIC</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP014PJoint::CGP014P::seq_no</property>
+                    <property name="alias">CGP014P::seq_no</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::seq_no</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP014PJoint::CGP014P::APPLICANT_ID_NO</property>
+                    <property name="alias">CGP014P::APPLICANT_ID_NO</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::APPLICANT_ID_NO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP014PJoint::BankBIC::BANK_BIC</property>
+                    <property name="alias">BankBIC::BANK_BIC</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP014PJoint::BankBIC::BANK_BIC</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP014PJoint::CGP014P::OA_NUMBER</property>
+                    <property name="alias">CGP014P::OA_NUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::OA_NUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BUSINESSDATE::EOD_LAST</property>
+                    <property name="alias">EOD_LAST</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">BUSINESSDATE::EOD_LAST</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">CGP014P::RA_BIC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CGP014P::OA_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">CGP014P::OA_BIC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">CGP014P::OA_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">CGP014P::RA_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">CGP014P::RA_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">CGP014P::APPLICANT_ID_NO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">CGP014P::MANDATE_REF</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">CGP014P::LIMIT_AMOUNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">CGP014P::INPUT_SOURCE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">CGP014P::LAST_PROCESSED_DT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">CGP014P::seq_no</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">BankBIC::BANK_BIC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">BankBIC::BANK_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">BankBIC::LOCAL_SHORTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">EOD_LAST</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">FORMAT_USER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <simple-property-list name="dataSets">
+                <value>CGP014PJoint</value>
+                <value>BUSINESSDATE</value>
+            </simple-property-list>
+            <list-property name="joinConditions">
+                <structure>
+                    <property name="joinType">inner</property>
+                    <property name="joinOperator">eq</property>
+                    <property name="leftDataSet">CGP014PJoint</property>
+                    <property name="rightDataSet">BUSINESSDATE</property>
+                    <expression name="leftExpression">dataSetRow["CGP014P::LAST_PROCESSED_DT"]</expression>
+                    <expression name="rightExpression">dataSetRow["EOD_LAST"]</expression>
                 </structure>
             </list-property>
         </joint-data-set>
@@ -1483,9 +1824,16 @@ from OPI.SFS_BIC]]></xml-property>
                     <row id="1569">
                         <property name="height">0.2in</property>
                         <cell id="1570">
-                            <label id="2437">
-                                <text-property name="text">CGP014P</text-property>
-                            </label>
+                            <data id="3574">
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">REPORT_NAME</property>
+                                        <expression name="expression" type="javascript">params["REPORT_NAME"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">REPORT_NAME</property>
+                            </data>
                         </cell>
                         <cell id="1571">
                             <label id="2780">
@@ -1509,9 +1857,16 @@ from OPI.SFS_BIC]]></xml-property>
                             <property name="colSpan">6</property>
                             <property name="rowSpan">1</property>
                             <property name="textAlign">center</property>
-                            <label id="2442">
-                                <text-property name="text">UOB (SG) SYSTEM - LCG</text-property>
-                            </label>
+                            <data id="3575">
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">BANK_NAME</property>
+                                        <expression name="expression" type="javascript">params["BANK_NAME"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">BANK_NAME</property>
+                            </data>
                         </cell>
                         <cell id="1580"/>
                         <cell id="1581"/>
@@ -1548,7 +1903,7 @@ from OPI.SFS_BIC]]></xml-property>
                             <property name="rowSpan">1</property>
                             <property name="textAlign">center</property>
                             <label id="2441">
-                                <text-property name="text">LCG-DDA CREATED SUCCESSFULLY</text-property>
+                                <text-property name="text">DDA CREATED SUCCESSFULLY</text-property>
                             </label>
                         </cell>
                         <cell id="1594"/>
@@ -1562,19 +1917,20 @@ from OPI.SFS_BIC]]></xml-property>
                             </label>
                         </cell>
                         <cell id="1598">
-                            <data id="3468">
-                                <structure name="dateTimeFormat">
-                                    <property name="category">Short Date</property>
-                                    <property name="pattern">Short Date</property>
-                                </structure>
+                            <data id="3577">
+                                <property name="dataSet">CGPBICBIZ</property>
                                 <list-property name="boundDataColumns">
                                     <structure>
-                                        <property name="name">PROCESSING_DATE</property>
-                                        <expression name="expression" type="javascript">params["PROCESSING_DATE"]</expression>
-                                        <property name="dataType">date</property>
+                                        <property name="name">EOD_LAST</property>
+                                        <text-property name="displayName">BUSINESSDATE::EOD_LAST</text-property>
+                                        <expression name="expression" type="javascript">//dataSetRow["EOD_LAST"]&#13;
+&#13;
+Formatter.format(new Date(dataSetRow["EOD_LAST"].substr(0,5).replace(",", ""), dataSetRow["EOD_LAST"].substr(5,3).replace(",", "") - 1, dataSetRow["EOD_LAST"].substr(8,2).replace(",", "")),  dataSetRow["FORMAT_USER"])</expression>
+                                        <property name="dataType">string</property>
+                                        <property name="allowExport">true</property>
                                     </structure>
                                 </list-property>
-                                <property name="resultSetColumn">PROCESSING_DATE</property>
+                                <property name="resultSetColumn">EOD_LAST</property>
                             </data>
                         </cell>
                     </row>
@@ -1616,242 +1972,354 @@ from OPI.SFS_BIC]]></xml-property>
         <table id="2217">
             <property name="height">100%</property>
             <property name="width">100%</property>
-            <property name="dataSet">CGP014PJoint</property>
+            <property name="dataSet">CGPBICBIZ</property>
             <list-property name="boundDataColumns">
                 <structure>
-                    <property name="name">OA_BIC</property>
-                    <text-property name="displayName">CGP014P::OA_BIC</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["OA_BIC"]</expression>
+                    <property name="name">CGP014P::RA_BIC</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::RA_BIC</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CGP014P::RA_BIC"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">OA_NUMBER</property>
-                    <text-property name="displayName">CGP014P::OA_NUMBER</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["OA_NUMBER"]</expression>
+                    <property name="name">CGP014P::OA_NUMBER</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::OA_NUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CGP014P::OA_NUMBER"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">RA_NAME</property>
-                    <text-property name="displayName">CGP014P::RA_NAME</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["RA_NAME"]</expression>
+                    <property name="name">CGP014P::OA_BIC</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::OA_BIC</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CGP014P::OA_BIC"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">OA_NAME</property>
-                    <text-property name="displayName">CGP014P::OA_NAME</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["OA_NAME"]</expression>
+                    <property name="name">CGP014P::OA_NAME</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::OA_NAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CGP014P::OA_NAME"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">RA_NUMBER</property>
-                    <text-property name="displayName">CGP014P::RA_NUMBER</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["RA_NUMBER"]</expression>
+                    <property name="name">CGP014P::RA_NUMBER</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::RA_NUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CGP014P::RA_NUMBER"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">APPLICANT_ID_NO</property>
-                    <text-property name="displayName">CGP014P::APPLICANT_ID_NO</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["APPLICANT_ID_NO"]</expression>
+                    <property name="name">CGP014P::RA_NAME</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::RA_NAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CGP014P::RA_NAME"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">MANDATE_REF</property>
-                    <text-property name="displayName">CGP014P::MANDATE_REF</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["MANDATE_REF"]</expression>
+                    <property name="name">CGP014P::APPLICANT_ID_NO</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::APPLICANT_ID_NO</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CGP014P::APPLICANT_ID_NO"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">LIMIT_AMOUNT</property>
-                    <text-property name="displayName">CGP014P::LIMIT_AMOUNT</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["LIMIT_AMOUNT"]</expression>
+                    <property name="name">CGP014P::MANDATE_REF</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::MANDATE_REF</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CGP014P::MANDATE_REF"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CGP014P::LIMIT_AMOUNT</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::LIMIT_AMOUNT</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CGP014P::LIMIT_AMOUNT"]</expression>
                     <property name="dataType">decimal</property>
                 </structure>
                 <structure>
-                    <property name="name">INPUT_SOURCE</property>
-                    <text-property name="displayName">CGP014P::INPUT_SOURCE</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["INPUT_SOURCE"]</expression>
+                    <property name="name">CGP014P::INPUT_SOURCE</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::INPUT_SOURCE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CGP014P::INPUT_SOURCE"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">Seq_no</property>
+                    <property name="name">CGP014P::LAST_PROCESSED_DT</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::LAST_PROCESSED_DT</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CGP014P::LAST_PROCESSED_DT"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">CGP014P::seq_no</property>
+                    <text-property name="displayName">CGP014PJoint::CGP014P::seq_no</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CGP014P::seq_no"]</expression>
                     <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">BankBIC::BANK_BIC</property>
+                    <text-property name="displayName">CGP014PJoint::BankBIC::BANK_BIC</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["BankBIC::BANK_BIC"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">BankBIC::BANK_NAME</property>
+                    <text-property name="displayName">CGP014PJoint::BankBIC::BANK_NAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["BankBIC::BANK_NAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">BankBIC::LOCAL_SHORTNAME</property>
+                    <text-property name="displayName">CGP014PJoint::BankBIC::LOCAL_SHORTNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["BankBIC::LOCAL_SHORTNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">EOD_LAST</property>
+                    <text-property name="displayName">BUSINESSDATE::EOD_LAST</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["EOD_LAST"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">FORMAT_USER</property>
+                    <text-property name="displayName">BUSINESSDATE::FORMAT_USER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["FORMAT_USER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation</property>
+                    <text-property name="displayName">SEQ</text-property>
+                    <property name="dataType">integer</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>OANUMBER</value>
+                    </simple-property-list>
                     <property name="aggregateFunction">RUNNINGCOUNT</property>
                     <list-property name="arguments">
                         <structure>
                             <property name="name">Expression</property>
-                            <expression name="value" type="javascript">1</expression>
+                            <expression name="value" type="javascript">row["CGP014P::RA_NUMBER"]</expression>
                         </structure>
                     </list-property>
                     <property name="allowExport">true</property>
                 </structure>
-                <structure>
-                    <property name="name">RA_BIC</property>
-                    <text-property name="displayName">CGP014P::RA_BIC</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["RA_BIC"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">Column Binding</property>
-                    <expression name="expression" type="javascript">pageNumber</expression>
-                    <property name="dataType">string</property>
-                    <property name="allowExport">true</property>
-                </structure>
             </list-property>
             <column id="2378">
-                <property name="width">0.775in</property>
+                <property name="width">0.95in</property>
             </column>
             <column id="2379">
-                <property name="width">0.6833333333333333in</property>
+                <property name="width">0.95in</property>
             </column>
             <column id="2380">
-                <property name="width">0.9666666666666667in</property>
+                <property name="width">0.95in</property>
             </column>
             <column id="2381">
-                <property name="width">0.675in</property>
+                <property name="width">0.95in</property>
             </column>
             <column id="2382">
-                <property name="width">0.8416666666666667in</property>
+                <property name="width">0.95in</property>
             </column>
             <column id="2383">
-                <property name="width">0.8416666666666667in</property>
+                <property name="width">0.95in</property>
             </column>
             <column id="2384">
-                <property name="width">0.8416666666666667in</property>
+                <property name="width">0.95in</property>
             </column>
             <column id="2385">
-                <property name="width">0.8416666666666667in</property>
+                <property name="width">0.95in</property>
             </column>
             <column id="2386">
-                <property name="width">0.8416666666666667in</property>
+                <property name="width">0.95in</property>
             </column>
             <column id="2388">
-                <property name="width">0.8416666666666667in</property>
+                <property name="width">0.95in</property>
             </column>
             <column id="2389">
-                <property name="width">0.8416666666666667in</property>
+                <property name="width">0.95in</property>
             </column>
             <column id="2390">
-                <property name="width">0.8416666666666667in</property>
+                <property name="width">0.95in</property>
             </column>
             <group id="2717">
                 <property name="groupName">OA_BIC</property>
-                <expression name="keyExpr" type="javascript">row["OA_BIC"]</expression>
+                <expression name="keyExpr" type="javascript">row["CGP014P::OA_BIC"]</expression>
                 <structure name="toc">
-                    <expression name="expressionValue" type="javascript">row["OA_BIC"]</expression>
+                    <expression name="expressionValue" type="javascript">row["CGP014P::OA_BIC"]</expression>
                 </structure>
                 <property name="hideDetail">false</property>
                 <property name="pageBreakAfter">always-excluding-last</property>
                 <property name="pageBreakInside">auto</property>
                 <header>
                     <row id="2718">
-                        <cell id="2719"/>
-                        <cell id="2720"/>
-                        <cell id="2721"/>
-                        <cell id="2722"/>
-                        <cell id="2723"/>
-                        <cell id="2724"/>
-                        <cell id="2725"/>
-                        <cell id="2726"/>
-                        <cell id="2727"/>
-                        <cell id="2729"/>
-                        <cell id="2730"/>
-                        <cell id="2731"/>
+                        <cell id="2719">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="2720">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="2721">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="2722">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="2723">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="2724">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="2725">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="2726">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="2727">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="2729">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="2730">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="2731">
+                            <property name="width">100%</property>
+                        </cell>
                     </row>
                 </header>
             </group>
             <group id="3071">
                 <property name="groupName">OANUMBER</property>
-                <expression name="keyExpr" type="javascript">row["OA_NUMBER"]</expression>
+                <expression name="keyExpr" type="javascript">row["CGP014P::OA_NUMBER"]</expression>
                 <structure name="toc">
-                    <expression name="expressionValue" type="javascript">row["OA_NUMBER"]</expression>
+                    <expression name="expressionValue" type="javascript">row["CGP014P::OA_NUMBER"]</expression>
                 </structure>
                 <property name="hideDetail">false</property>
                 <property name="pageBreakAfter">always-excluding-last</property>
                 <list-property name="sort">
                     <structure>
-                        <expression name="key" type="javascript">row["RA_BIC"]</expression>
+                        <expression name="key" type="javascript">row["CGP014P::RA_BIC"]</expression>
                         <property name="direction">asc</property>
                         <property name="strength">-1</property>
                     </structure>
                     <structure>
-                        <expression name="key" type="javascript">row["OA_BIC"]</expression>
+                        <expression name="key" type="javascript">row["CGP014P::OA_BIC"]</expression>
                         <property name="direction">asc</property>
                         <property name="strength">-1</property>
                     </structure>
                     <structure>
-                        <expression name="key" type="javascript">row["OA_NUMBER"]</expression>
+                        <expression name="key" type="javascript">row["CGP014P::OA_NUMBER"]</expression>
                         <property name="direction">asc</property>
                         <property name="strength">-1</property>
                     </structure>
                     <structure>
-                        <expression name="key" type="javascript">row["INPUT_SOURCE"]</expression>
+                        <expression name="key" type="javascript">row["CGP014P::INPUT_SOURCE"]</expression>
                         <property name="direction">asc</property>
                         <property name="strength">-1</property>
                     </structure>
                     <structure>
-                        <expression name="key" type="javascript">row["RA_NUMBER"]</expression>
+                        <expression name="key" type="javascript">row["CGP014P::RA_NUMBER"]</expression>
                         <property name="direction">asc</property>
                         <property name="strength">-1</property>
                     </structure>
                     <structure>
-                        <expression name="key" type="javascript">row["MANDATE_REF"]</expression>
+                        <expression name="key" type="javascript">row["CGP014P::MANDATE_REF"]</expression>
                         <property name="direction">asc</property>
                         <property name="strength">-1</property>
                     </structure>
                 </list-property>
                 <header>
                     <row id="3072">
-                        <cell id="3073"/>
-                        <cell id="3074"/>
-                        <cell id="3075"/>
-                        <cell id="3076"/>
-                        <cell id="3077"/>
-                        <cell id="3078"/>
-                        <cell id="3079"/>
-                        <cell id="3080"/>
-                        <cell id="3081"/>
-                        <cell id="3083"/>
-                        <cell id="3084"/>
-                        <cell id="3085"/>
+                        <cell id="3073">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3074">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3075">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3076">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3077">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3078">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3079">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3080">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3081">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3083">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3084">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3085">
+                            <property name="width">100%</property>
+                        </cell>
                     </row>
                     <row id="3213">
                         <cell id="3214">
                             <property name="colSpan">2</property>
                             <property name="rowSpan">1</property>
+                            <property name="width">100%</property>
                             <label id="3233">
                                 <property name="textAlign">left</property>
                                 <text-property name="text">OA BIC-ACCOUNT NO: </text-property>
                             </label>
                         </cell>
                         <cell id="3216">
-                            <property name="colSpan">2</property>
-                            <property name="rowSpan">1</property>
-                            <data id="3236">
-                                <property name="resultSetColumn">OA_BIC</property>
-                            </data>
-                        </cell>
-                        <cell id="3325">
                             <property name="colSpan">3</property>
                             <property name="rowSpan">1</property>
-                            <data id="3238">
-                                <property name="resultSetColumn">OA_NUMBER</property>
-                            </data>
+                            <property name="width">100%</property>
+                            <grid id="3551">
+                                <column id="3552"/>
+                                <column id="3553"/>
+                                <row id="3554">
+                                    <cell id="3555">
+                                        <data id="3559">
+                                            <property name="resultSetColumn">CGP014P::OA_BIC</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="3556">
+                                        <data id="3560">
+                                            <property name="resultSetColumn">CGP014P::OA_NUMBER</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                            </grid>
                         </cell>
-                        <cell id="3329"/>
-                        <cell id="3330"/>
+                        <cell id="3508">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3509">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3329">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3330">
+                            <property name="width">100%</property>
+                        </cell>
                         <cell id="3224">
-                            <property name="colSpan">2</property>
+                            <property name="colSpan">1</property>
                             <property name="rowSpan">1</property>
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3571">
+                            <property name="width">100%</property>
                         </cell>
                         <cell id="3226">
                             <property name="colSpan">1</property>
                             <property name="rowSpan">1</property>
+                            <property name="width">100%</property>
                         </cell>
                     </row>
                     <row id="3113">
                         <cell id="3114">
                             <property name="colSpan">2</property>
                             <property name="rowSpan">1</property>
+                            <property name="width">100%</property>
                             <label id="3234">
                                 <property name="textAlign">left</property>
                                 <text-property name="text">DEBTOR'S NAME: </text-property>
@@ -1860,36 +2328,54 @@ from OPI.SFS_BIC]]></xml-property>
                         <cell id="3116">
                             <property name="colSpan">4</property>
                             <property name="rowSpan">1</property>
-                            <data id="3240">
-                                <property name="resultSetColumn">OA_NAME</property>
+                            <property name="width">100%</property>
+                            <data id="3561">
+                                <property name="resultSetColumn">CGP014P::OA_NAME</property>
                             </data>
                         </cell>
-                        <cell id="3120"/>
-                        <cell id="3121"/>
-                        <cell id="3122"/>
-                        <cell id="3124">
-                            <property name="colSpan">2</property>
-                            <property name="rowSpan">1</property>
+                        <cell id="3120">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3121">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3122">
+                            <property name="width">100%</property>
                         </cell>
                         <cell id="3126">
                             <property name="colSpan">1</property>
                             <property name="rowSpan">1</property>
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3572">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3573">
+                            <property name="width">100%</property>
                         </cell>
                     </row>
                     <row id="3241">
                         <cell id="3242">
                             <property name="colSpan">9</property>
                             <property name="rowSpan">1</property>
+                            <property name="width">100%</property>
                             <label id="2886">
-                                <text-property name="text">-------------------------------------------------------  Receving  -------------------------------------------------------</text-property>
+                                <text-property name="text">-------------------------------------------------------  Receiving-------------------------------------------------------</text-property>
                             </label>
                         </cell>
-                        <cell id="3252"/>
-                        <cell id="3253"/>
-                        <cell id="3254"/>
+                        <cell id="3252">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3253">
+                            <property name="width">100%</property>
+                        </cell>
+                        <cell id="3254">
+                            <property name="width">100%</property>
+                        </cell>
                     </row>
                     <row id="3264">
                         <cell id="3265">
+                            <property name="width">100%</property>
                             <label id="2461">
                                 <text-property name="text">SEQ NO</text-property>
                             </label>
@@ -1897,6 +2383,7 @@ from OPI.SFS_BIC]]></xml-property>
                         <cell id="3266">
                             <property name="colSpan">4</property>
                             <property name="rowSpan">1</property>
+                            <property name="width">100%</property>
                             <label id="2462">
                                 <text-property name="text">ACCOUNT NO</text-property>
                             </label>
@@ -1904,51 +2391,67 @@ from OPI.SFS_BIC]]></xml-property>
                         <cell id="3270">
                             <property name="colSpan">2</property>
                             <property name="rowSpan">1</property>
+                            <property name="width">100%</property>
                             <label id="2524">
                                 <text-property name="text">NRIC / PASSPORT NO.</text-property>
                             </label>
                         </cell>
                         <cell id="3452">
+                            <property name="width">100%</property>
                             <label id="2525">
                                 <text-property name="text">MANDATE ID</text-property>
                             </label>
                         </cell>
-                        <cell id="3453"/>
+                        <cell id="3453">
+                            <property name="width">100%</property>
+                        </cell>
                         <cell id="3275">
                             <property name="colSpan">1</property>
                             <property name="rowSpan">1</property>
+                            <property name="width">100%</property>
                         </cell>
                         <cell id="3458">
                             <property name="colSpan">2</property>
                             <property name="rowSpan">1</property>
+                            <property name="width">100%</property>
                             <label id="3262">
-                                <text-property name="text">CREATION SRC</text-property>
+                                <text-property name="text">CREATION SOURCE</text-property>
                             </label>
                         </cell>
                     </row>
                     <row id="3304">
-                        <cell id="3305"/>
+                        <cell id="3305">
+                            <property name="width">100%</property>
+                        </cell>
                         <cell id="3306">
                             <property name="colSpan">5</property>
                             <property name="rowSpan">1</property>
+                            <property name="width">100%</property>
                             <label id="2463">
                                 <text-property name="text">RA NAME</text-property>
                             </label>
                         </cell>
-                        <cell id="3311"/>
+                        <cell id="3311">
+                            <property name="width">100%</property>
+                        </cell>
                         <cell id="3312">
+                            <property name="width">100%</property>
                             <label id="3261">
                                 <text-property name="text">DEBIT LIMIT</text-property>
                             </label>
                         </cell>
-                        <cell id="3313"/>
+                        <cell id="3313">
+                            <property name="width">100%</property>
+                        </cell>
                         <cell id="3315">
                             <property name="colSpan">1</property>
                             <property name="rowSpan">1</property>
+                            <property name="width">100%</property>
                         </cell>
                         <cell id="3459">
                             <property name="colSpan">2</property>
                             <property name="rowSpan">1</property>
+                            <property name="width">100%</property>
                             <label id="2529">
                                 <text-property name="text">ACTION CODE</text-property>
                             </label>
@@ -1959,172 +2462,259 @@ from OPI.SFS_BIC]]></xml-property>
                             <property name="colSpan">12</property>
                             <property name="rowSpan">1</property>
                             <property name="borderTopStyle">solid</property>
-                            <property name="borderTopWidth">medium</property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="width">100%</property>
                         </cell>
                     </row>
                 </header>
             </group>
             <detail>
-                <row id="2760">
-                    <cell id="2761">
-                        <data id="2794">
-                            <property name="resultSetColumn">Seq_no</property>
-                        </data>
-                    </cell>
-                    <cell id="2762">
-                        <property name="colSpan">4</property>
-                        <property name="rowSpan">1</property>
-                        <data id="2781">
-                            <property name="resultSetColumn">RA_NUMBER</property>
-                        </data>
-                    </cell>
-                    <cell id="3463">
-                        <data id="2783">
-                            <property name="resultSetColumn">APPLICANT_ID_NO</property>
-                        </data>
-                    </cell>
-                    <cell id="2767">
-                        <property name="colSpan">1</property>
-                        <property name="rowSpan">1</property>
-                    </cell>
-                    <cell id="3454">
-                        <property name="colSpan">2</property>
-                        <property name="rowSpan">1</property>
-                        <data id="2784">
-                            <property name="resultSetColumn">MANDATE_REF</property>
-                        </data>
-                    </cell>
-                    <cell id="3464"/>
-                    <cell id="3456">
-                        <text id="3465">
-                            <property name="contentType">auto</property>
-                            <text-property name="content"><![CDATA[EPS]]></text-property>
-                        </text>
-                    </cell>
-                    <cell id="2773">
-                        <property name="colSpan">1</property>
-                        <property name="rowSpan">1</property>
-                        <data id="2786">
-                            <property name="resultSetColumn">INPUT_SOURCE</property>
-                        </data>
-                    </cell>
-                </row>
-                <row id="2484">
-                    <cell id="2485"/>
-                    <cell id="2486">
-                        <property name="colSpan">5</property>
-                        <property name="rowSpan">1</property>
-                        <data id="2782">
-                            <property name="resultSetColumn">RA_NAME</property>
-                        </data>
-                    </cell>
-                    <cell id="2491"/>
-                    <cell id="2492">
-                        <data id="2785">
-                            <property name="resultSetColumn">LIMIT_AMOUNT</property>
-                        </data>
-                    </cell>
-                    <cell id="2493"/>
-                    <cell id="2495">
-                        <property name="colSpan">1</property>
-                        <property name="rowSpan">1</property>
-                    </cell>
-                    <cell id="3457">
-                        <label id="2787">
-                            <text-property name="text">ADD</text-property>
-                        </label>
-                    </cell>
-                    <cell id="2497">
-                        <property name="colSpan">1</property>
-                        <property name="rowSpan">1</property>
-                    </cell>
-                </row>
                 <row id="2504">
-                    <cell id="2505"/>
-                    <cell id="2506"/>
-                    <cell id="2507"/>
-                    <cell id="2508"/>
-                    <cell id="2509"/>
-                    <cell id="2510"/>
-                    <cell id="2511"/>
-                    <cell id="2512"/>
-                    <cell id="2513"/>
-                    <cell id="2515"/>
-                    <cell id="2516"/>
-                    <cell id="2517"/>
+                    <cell id="2505">
+                        <property name="colSpan">12</property>
+                        <property name="rowSpan">1</property>
+                        <property name="width">100%</property>
+                        <grid id="3469">
+                            <column id="3470">
+                                <property name="width">0.93in</property>
+                            </column>
+                            <column id="3471">
+                                <property name="width">0.95in</property>
+                            </column>
+                            <column id="3472">
+                                <property name="width">0.95in</property>
+                            </column>
+                            <column id="3473">
+                                <property name="width">0.95in</property>
+                            </column>
+                            <column id="3474">
+                                <property name="width">0.95in</property>
+                            </column>
+                            <column id="3475">
+                                <property name="width">0.95in</property>
+                            </column>
+                            <column id="3476">
+                                <property name="width">0.95in</property>
+                            </column>
+                            <column id="3477">
+                                <property name="width">0.95in</property>
+                            </column>
+                            <column id="3478">
+                                <property name="width">0.95in</property>
+                            </column>
+                            <column id="3479">
+                                <property name="width">0.95in</property>
+                            </column>
+                            <column id="3480">
+                                <property name="width">0.95in</property>
+                            </column>
+                            <column id="3481">
+                                <property name="width">0.95in</property>
+                            </column>
+                            <row id="3482">
+                                <cell id="3483">
+                                    <data id="3570">
+                                        <property name="resultSetColumn">Aggregation</property>
+                                    </data>
+                                </cell>
+                                <cell id="3484">
+                                    <property name="colSpan">4</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="3562">
+                                        <property name="resultSetColumn">CGP014P::RA_NUMBER</property>
+                                    </data>
+                                </cell>
+                                <cell id="3488">
+                                    <data id="3564">
+                                        <property name="resultSetColumn">CGP014P::APPLICANT_ID_NO</property>
+                                    </data>
+                                </cell>
+                                <cell id="3489"/>
+                                <cell id="3490">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="3565">
+                                        <property name="resultSetColumn">CGP014P::MANDATE_REF</property>
+                                    </data>
+                                </cell>
+                                <cell id="3492"/>
+                                <cell id="3493">
+                                    <text id="3465">
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[EPS]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="3494">
+                                    <data id="3567">
+                                        <property name="resultSetColumn">CGP014P::INPUT_SOURCE</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="3495">
+                                <cell id="3496"/>
+                                <cell id="3497">
+                                    <property name="colSpan">5</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="3563">
+                                        <property name="resultSetColumn">CGP014P::RA_NAME</property>
+                                    </data>
+                                </cell>
+                                <cell id="3502"/>
+                                <cell id="3503">
+                                    <data id="3566">
+                                        <property name="resultSetColumn">CGP014P::LIMIT_AMOUNT</property>
+                                    </data>
+                                </cell>
+                                <cell id="3504"/>
+                                <cell id="3505"/>
+                                <cell id="3506">
+                                    <label id="2787">
+                                        <text-property name="text">ADD</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="3507"/>
+                            </row>
+                        </grid>
+                    </cell>
                 </row>
             </detail>
             <footer>
                 <row id="2988">
                     <cell id="2989">
+                        <property name="width">100%</property>
                         <text id="3028">
                             <property name="contentType">auto</property>
                             <text-property name="content"><![CDATA[ ]]></text-property>
                         </text>
                     </cell>
-                    <cell id="2990"/>
-                    <cell id="2991"/>
-                    <cell id="2992"/>
-                    <cell id="2993"/>
-                    <cell id="2994"/>
-                    <cell id="2995"/>
-                    <cell id="2996"/>
-                    <cell id="2997"/>
-                    <cell id="2999"/>
-                    <cell id="3000"/>
-                    <cell id="3001"/>
+                    <cell id="2990">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="2991">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="2992">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="2993">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="2994">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="2995">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="2996">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="2997">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="2999">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="3000">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="3001">
+                        <property name="width">100%</property>
+                    </cell>
                 </row>
                 <row id="2966">
-                    <cell id="2967"/>
-                    <cell id="2968"/>
-                    <cell id="2969"/>
+                    <cell id="2967">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="2968">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="2969">
+                        <property name="width">100%</property>
+                    </cell>
                     <cell id="2970">
                         <property name="colSpan">2</property>
                         <property name="rowSpan">1</property>
+                        <property name="width">100%</property>
                         <text id="2986">
                             <property name="contentType">auto</property>
                             <text-property name="content"><![CDATA[REVIEWED BY: ]]></text-property>
                         </text>
                     </cell>
-                    <cell id="2972"/>
+                    <cell id="2972">
+                        <property name="width">100%</property>
+                    </cell>
                     <cell id="2973">
                         <property name="colSpan">1</property>
                         <property name="rowSpan">1</property>
+                        <property name="width">100%</property>
                     </cell>
-                    <cell id="3466"/>
+                    <cell id="3466">
+                        <property name="width">100%</property>
+                    </cell>
                     <cell id="2975">
+                        <property name="width">100%</property>
                         <text id="2987">
                             <property name="contentType">auto</property>
                             <text-property name="content"><![CDATA[DATE:]]></text-property>
                         </text>
                     </cell>
-                    <cell id="2977"/>
-                    <cell id="2978"/>
-                    <cell id="2979"/>
+                    <cell id="2977">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="2978">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="2979">
+                        <property name="width">100%</property>
+                    </cell>
                 </row>
                 <row id="3008">
                     <cell id="3009">
+                        <property name="width">100%</property>
                         <text id="3029">
                             <property name="contentType">auto</property>
                             <text-property name="content"><![CDATA[ ]]></text-property>
                         </text>
                     </cell>
-                    <cell id="3010"/>
-                    <cell id="3011"/>
-                    <cell id="3012"/>
-                    <cell id="3013"/>
-                    <cell id="3014"/>
-                    <cell id="3015"/>
-                    <cell id="3016"/>
-                    <cell id="3017"/>
-                    <cell id="3019"/>
-                    <cell id="3020"/>
-                    <cell id="3021"/>
+                    <cell id="3010">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="3011">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="3012">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="3013">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="3014">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="3015">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="3016">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="3017">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="3019">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="3020">
+                        <property name="width">100%</property>
+                    </cell>
+                    <cell id="3021">
+                        <property name="width">100%</property>
+                    </cell>
                 </row>
                 <row id="3405">
                     <cell id="3406">
                         <property name="colSpan">12</property>
                         <property name="rowSpan">1</property>
+                        <property name="width">100%</property>
                         <text id="3363">
                             <property name="textAlign">center</property>
                             <list-property name="visibility">
@@ -2146,6 +2736,7 @@ false;&#13;
                     <cell id="3333">
                         <property name="colSpan">12</property>
                         <property name="rowSpan">1</property>
+                        <property name="width">100%</property>
                         <text id="3362">
                             <property name="textAlign">center</property>
                             <property name="contentType">auto</property>

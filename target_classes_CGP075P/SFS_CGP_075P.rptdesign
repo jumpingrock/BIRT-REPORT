@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="author">Kevin</property>
+    <property name="author">KENNETH</property>
     <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
     <text-property name="title">USER LISTING REPORT</text-property>
     <html-property name="description">This report lists all users by division.</html-property>
@@ -96,7 +96,7 @@ ACTCAMT = 0;]]></method>
             <property name="dataType">date</property>
             <property name="distinct">true</property>
             <simple-property-list name="defaultValue">
-                <value type="javascript">Formatter.format(BirtDateTime.addDay(BirtDateTime.today(),-1), "yyyyMMdd");</value>
+                <value type="javascript">BirtDateTime.addDay(BirtDateTime.today(),-1);</value>
             </simple-property-list>
             <list-property name="selectionList"/>
             <property name="paramType">simple</property>

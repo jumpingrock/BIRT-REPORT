@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;target_classes_CGP013P/SFS_CGP_017P.rptdesign&apos; to &apos;SFS_CGP_013P.rptdesign&apos;" description="Rename resource &apos;SFS_CGP_017P.rptdesign&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="SFS_CGP_017P.rptdesign" name="SFS_CGP_013P.rptdesign" stamp="1561706638990" updateReferences="true"/>
-</session>

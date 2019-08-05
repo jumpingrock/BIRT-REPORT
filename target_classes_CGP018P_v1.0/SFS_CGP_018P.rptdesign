@@ -1,0 +1,2114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="author">KENNETH</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
+    <text-property name="title">USER LISTING REPORT</text-property>
+    <html-property name="description">This report lists all users by division.</html-property>
+    <list-property name="userProperties">
+        <structure>
+            <property name="name">Data Cube.USERDS.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">Data Cube.USERDS.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+    </list-property>
+    <property name="Data Cube.USERDS.x">135</property>
+    <property name="Data Cube.USERDS.y">80</property>
+    <list-property name="includeScripts">
+        <property>LCGP002X.js</property>
+        <property>res/my-js.js</property>
+    </list-property>
+    <property name="units">in</property>
+    <method name="beforeFactory"><![CDATA[
+]]></method>
+    <method name="onPageStart"><![CDATA[
+]]></method>
+    <text-property name="displayName">This report lists all users by division.</text-property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">fixed layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="BANK_NAME" id="626">
+            <text-property name="promptText">Bank name</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">UOB (SG) SYSTEM</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="REPORT_NAME" id="627">
+            <text-property name="promptText">Report name</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">EPSP018P</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="PROCESSING_DATE" id="4359">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript">BirtDateTime.addDay(BirtDateTime.today(),-1)</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Custom</property>
+                <property name="pattern">yyyyMMdd</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="SESSDS" id="611">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">oracle.jdbc.OracleDriver</property>
+            <property name="odaURL">jdbc:oracle:thin:@192.168.1.113:1522:SESSDB</property>
+            <property name="odaUser">epsuser</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">ZXBzdXNlcg==</encrypted-property>
+        </oda-data-source>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="SESUSER" id="1853">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">oracle.jdbc.OracleDriver</property>
+            <property name="odaURL">jdbc:oracle:thin:@192.168.1.113:1522:sessdb</property>
+            <property name="odaUser">sesuser</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">c2VzdXNlcg==</encrypted-property>
+        </oda-data-source>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="OPI" id="3364">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">oracle.jdbc.OracleDriver</property>
+            <property name="odaURL">jdbc:oracle:thin:@192.168.1.113:1521/SESSDB</property>
+            <property name="odaUser">opi</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">b3JhY2xl</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.dbprofile.sqbDataSet" name="AUDITDS" id="77">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">JOB_DIVISION</property>
+                    <property name="alias">JOB_DIVISION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">JOB_DIVISION</text-property>
+                    <text-property name="heading">JOB_DIVISION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">LOCAL_DESCRIPTION</property>
+                    <property name="alias">LOCAL_DESCRIPTION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">LOCAL_DESCRIPTION</text-property>
+                    <text-property name="heading">LOCAL_DESCRIPTION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">RECORD_ID</property>
+                    <property name="alias">RECORD_ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">RECORD_ID</text-property>
+                    <text-property name="heading">RECORD_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">KEY_ID</property>
+                    <property name="alias">KEY_ID</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">KEY_ID</text-property>
+                    <text-property name="heading">KEY_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ACTION</property>
+                    <property name="alias">ACTION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ACTION</text-property>
+                    <text-property name="heading">ACTION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FIELD_ID</property>
+                    <property name="alias">FIELD_ID</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">FIELD_ID</text-property>
+                    <text-property name="heading">FIELD_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DATA_ORIGINAL</property>
+                    <property name="alias">DATA_ORIGINAL</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">DATA_ORIGINAL</text-property>
+                    <text-property name="heading">DATA_ORIGINAL</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DATA_UPDATE</property>
+                    <property name="alias">DATA_UPDATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">DATA_UPDATE</text-property>
+                    <text-property name="heading">DATA_UPDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MAKER_ID</property>
+                    <property name="alias">MAKER_ID</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">MAKER_ID</text-property>
+                    <text-property name="heading">MAKER_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MAKER_TMS</property>
+                    <property name="alias">MAKER_TMS</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">MAKER_TMS</text-property>
+                    <text-property name="heading">MAKER_TMS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">REVIEWER_ID</property>
+                    <property name="alias">REVIEWER_ID</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">REVIEWER_ID</text-property>
+                    <text-property name="heading">REVIEWER_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">REVIEWER_TMS</property>
+                    <property name="alias">REVIEWER_TMS</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">REVIEWER_TMS</text-property>
+                    <text-property name="heading">REVIEWER_TMS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">KEY_DATA</property>
+                    <property name="alias">KEY_DATA</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">KEY_DATA</text-property>
+                    <text-property name="heading">KEY_DATA</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">JOB_DIVISION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">LOCAL_DESCRIPTION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">RECORD_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">KEY_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">ACTION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">FIELD_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">DATA_ORIGINAL</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">DATA_UPDATE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">MAKER_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">MAKER_TMS</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">REVIEWER_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">REVIEWER_TMS</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">APPROVED_TMS</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">APPROVED_ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">KEY_DATA</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">SESSDS</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">JOB_DIVISION</property>
+                    <property name="nativeName">JOB_DIVISION</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">LOCAL_DESCRIPTION</property>
+                    <property name="nativeName">LOCAL_DESCRIPTION</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">RECORD_ID</property>
+                    <property name="nativeName">RECORD_ID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">KEY_ID</property>
+                    <property name="nativeName">KEY_ID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">ACTION</property>
+                    <property name="nativeName">ACTION</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">FIELD_ID</property>
+                    <property name="nativeName">FIELD_ID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">DATA_ORIGINAL</property>
+                    <property name="nativeName">DATA_ORIGINAL</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">DATA_UPDATE</property>
+                    <property name="nativeName">DATA_UPDATE</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">MAKER_ID</property>
+                    <property name="nativeName">MAKER_ID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">MAKER_TMS</property>
+                    <property name="nativeName">MAKER_TMS</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">REVIEWER_ID</property>
+                    <property name="nativeName">REVIEWER_ID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">REVIEWER_TMS</property>
+                    <property name="nativeName">REVIEWER_TMS</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">APPROVED_TMS</property>
+                    <property name="nativeName">APPROVED_TMS</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">APPROVED_ID</property>
+                    <property name="nativeName">APPROVED_ID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">KEY_DATA</property>
+                    <property name="nativeName">KEY_DATA</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[
+            SELECT D.JOB_DIVISION, V.LOCAL_DESCRIPTION, M.RECORD_ID, M.KEY_ID,
+  M.ACTION, M.FIELD_ID, M.DATA_ORIGINAL, M.DATA_UPDATE, M.MAKER_ID,
+  M.MAKER_TMS, M.REVIEWER_ID, M.REVIEWER_TMS, M.APPROVED_TMS, M.APPROVED_ID,M.KEY_DATA
+  FROM
+       SFS_REPORT_MAINTENANCE M INNER JOIN SFS_SYSTEM_USER_DATA D ON M.MAKER_ID = D.USER_ID LEFT OUTER JOIN SFS_DATA_VALUES V ON D.JOB_DIVISION = V.DATA_VALUE
+]]></xml-property>
+            <structure name="designerState">
+                <property name="version">1.0</property>
+                <property name="stateContentAsString">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;SQLQueryBuilder editorInputType="SQLBuilderStorageEditorInput" name="AUDITDS" version="1.0">
+&lt;SQLStatement>SELECT D.JOB_DIVISION, V.LOCAL_DESCRIPTION, M.RECORD_ID, M.KEY_ID,&amp;#x0A;  M.ACTION, M.FIELD_ID, M.DATA_ORIGINAL, M.DATA_UPDATE, M.MAKER_ID,&amp;#x0A;  M.MAKER_TMS, M.REVIEWER_ID, M.REVIEWER_TMS, M.KEY_DATA&amp;#x0A;  FROM&amp;#x0A;       SFS_DAILY_MAINT_FIRST M INNER JOIN SFS_SYSTEM_USER_DATA D ON M.MAKER_ID = D.USER_ID LEFT OUTER JOIN SFS_DATA_VALUES V ON D.JOB_DIVISION = V.DATA_VALUE&amp;#x0A;UNION ALL&amp;#x0A;SELECT D.JOB_DIVISION, V.LOCAL_DESCRIPTION, M.RECORD_ID, M.KEY_ID,&amp;#x0A;  M.ACTION, M.FIELD_ID, M.DATA_ORIGINAL, M.DATA_UPDATE, M.MAKER_ID,&amp;#x0A;  M.MAKER_TMS, M.REVIEWER_ID, M.REVIEWER_TMS, M.KEY_DATA&amp;#x0A;  FROM&amp;#x0A;       SFS_DAILY_MAINT_SECOND M INNER JOIN SFS_SYSTEM_USER_DATA D ON M.MAKER_ID = D.USER_ID INNER JOIN SFS_DATA_VALUES V ON D.JOB_DIVISION = V.DATA_VALUE&amp;#x0A;&lt;/SQLStatement>
+&lt;connInfo>Oracle_11:Transient.org.eclipse.datatools.enablement.oracle.connectionProfile:SESSDB:opipadm&lt;/connInfo>
+&lt;omitSchemaInfo>false:true:&lt;/omitSchemaInfo>
+&lt;editorInputUsageOptions>useWindowState=true&lt;/editorInputUsageOptions>
+&lt;windowState height="841" version="1.0" width="1703">
+&lt;control height="312" isHideable="true" isVisible="true" name="SQLSourceViewer" width="1678"/>
+&lt;control height="169" isHideable="true" isVisible="true" name="DesignViewer" width="1691"/>
+&lt;control height="328" isHideable="true" isVisible="true" name="GraphControl" width="1683"/>
+&lt;control height="328" isHideable="true" isVisible="false" name="OutlineViewer" width="72"/>
+&lt;/windowState>
+&lt;/SQLQueryBuilder></property>
+            </structure>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>RECORD_ID</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>RECORD_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>RECORD_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>12</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>JOB_DIVISION</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>40</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>JOB_DIVISION</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>JOB_DIVISION</design:label>
+            <design:formattingHints>
+              <design:displaySize>40</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>USER_ID</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>32</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>USER_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>USER_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>32</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>NAME</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>140</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>NAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>NAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>140</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ACCESS_ID</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ACCESS_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ACCESS_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CLASS_LEVEL</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>9</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CLASS_LEVEL</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CLASS_LEVEL</design:label>
+            <design:formattingHints>
+              <design:displaySize>9</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>MAKER_ID</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>32</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>MAKER_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>MAKER_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>32</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>MAKER_TMS</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>MAKER_TMS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>MAKER_TMS</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CHECKER_ID</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>32</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CHECKER_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CHECKER_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>32</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CHECKER_TMS</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CHECKER_TMS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CHECKER_TMS</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>STATUS</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>9</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>STATUS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>STATUS</design:label>
+            <design:formattingHints>
+              <design:displaySize>9</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>LEGAL_COUNTRY</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>3</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>LEGAL_COUNTRY</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>LEGAL_COUNTRY</design:label>
+            <design:formattingHints>
+              <design:displaySize>3</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria>
+        <design:rowOrdering/>
+      </design:criteria>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="CGP018P_DATA" id="3366">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">OA_BIC</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">OA_BIC</text-property>
+                    <text-property name="heading">OA_BIC</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">OA_NUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">OA_NUMBER</text-property>
+                    <text-property name="heading">OA_NUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">OA_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">OA_NAME</text-property>
+                    <text-property name="heading">OA_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">RA_NUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">RA_NUMBER</text-property>
+                    <text-property name="heading">RA_NUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">RA_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">RA_NAME</text-property>
+                    <text-property name="heading">RA_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">RA_BIC</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">RA_BIC</text-property>
+                    <text-property name="heading">RA_BIC</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">APPLICANT_ID_NO</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">APPLICANT_ID_NO</text-property>
+                    <text-property name="heading">APPLICANT_ID_NO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MANDATE_REF</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">MANDATE_REF</text-property>
+                    <text-property name="heading">MANDATE_REF</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">LIMIT_AMOUNT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">LIMIT_AMOUNT</text-property>
+                    <text-property name="heading">LIMIT_AMOUNT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">INPUT_SOURCE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">INPUT_SOURCE</text-property>
+                    <text-property name="heading">INPUT_SOURCE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">SENT_BILLER_DT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">SENT_BILLER_DT</text-property>
+                    <text-property name="heading">SENT_BILLER_DT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">LAST_PROCESSED_DT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">LAST_PROCESSED_DT</text-property>
+                    <text-property name="heading">LAST_PROCESSED_DT</text-property>
+                </structure>
+            </list-property>
+            <list-property name="filter"/>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">OA_BIC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">OA_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">OA_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">RA_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">RA_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">RA_BIC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">APPLICANT_ID_NO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">MANDATE_REF</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">LIMIT_AMOUNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">INPUT_SOURCE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">SENT_BILLER_DT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">LAST_PROCESSED_DT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">OPI</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">OA_BIC</property>
+                    <property name="nativeName">OA_BIC</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">OA_NUMBER</property>
+                    <property name="nativeName">OA_NUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">OA_NAME</property>
+                    <property name="nativeName">OA_NAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">RA_NUMBER</property>
+                    <property name="nativeName">RA_NUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">RA_NAME</property>
+                    <property name="nativeName">RA_NAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">RA_BIC</property>
+                    <property name="nativeName">RA_BIC</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">APPLICANT_ID_NO</property>
+                    <property name="nativeName">APPLICANT_ID_NO</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">MANDATE_REF</property>
+                    <property name="nativeName">MANDATE_REF</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">LIMIT_AMOUNT</property>
+                    <property name="nativeName">LIMIT_AMOUNT</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">INPUT_SOURCE</property>
+                    <property name="nativeName">INPUT_SOURCE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">SENT_BILLER_DT</property>
+                    <property name="nativeName">SENT_BILLER_DT</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">LAST_PROCESSED_DT</property>
+                    <property name="nativeName">LAST_PROCESSED_DT</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select 
+OPI.EPS_DDA_MANDATE.OA_BIC,
+OPI.EPS_DDA_MANDATE.OA_NUMBER,
+OPI.EPS_DDA_MANDATE.OA_NAME,
+OPI.EPS_DDA_MANDATE.RA_NUMBER,
+OPI.EPS_DDA_MANDATE.RA_NAME,
+OPI.EPS_DDA_MANDATE.RA_BIC,
+OPI.EPS_DDA_MANDATE.APPLICANT_ID_NO,
+OPI.EPS_DDA_MANDATE.MANDATE_REF,
+OPI.EPS_DDA_MANDATE.LIMIT_AMOUNT,
+OPI.EPS_DDA_MANDATE.INPUT_SOURCE,
+OPI.EPS_DDA_MANDATE.SENT_BILLER_DT,
+OPI.EPS_DDA_MANDATE.LAST_PROCESSED_DT
+from OPI.EPS_DDA_MANDATE ]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>OA_BIC</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>35</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>OA_BIC</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>OA_BIC</design:label>
+            <design:formattingHints>
+              <design:displaySize>35</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>OA_NUMBER</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>34</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>OA_NUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>OA_NUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>34</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>RA_NUMBER</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>34</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>RA_NUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>RA_NUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>34</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>RA_NAME</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>140</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>RA_NAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>RA_NAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>140</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>APPLICANT_ID_NO</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>35</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>APPLICANT_ID_NO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>APPLICANT_ID_NO</design:label>
+            <design:formattingHints>
+              <design:displaySize>35</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>MANDATE_REF</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>35</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>MANDATE_REF</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>MANDATE_REF</design:label>
+            <design:formattingHints>
+              <design:displaySize>35</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>LIMIT_AMOUNT</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>17</design:precision>
+            <design:scale>2</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>LIMIT_AMOUNT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>LIMIT_AMOUNT</design:label>
+            <design:formattingHints>
+              <design:displaySize>19</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>INPUT_SOURCE</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>32</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>INPUT_SOURCE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>INPUT_SOURCE</design:label>
+            <design:formattingHints>
+              <design:displaySize>32</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="BUSINESSDATE" id="4361">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">EOD_LAST</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">EOD_LAST</text-property>
+                    <text-property name="heading">EOD_LAST</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FORMAT_USER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">FORMAT_USER</text-property>
+                    <text-property name="heading">FORMAT_USER</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">EOD_LAST</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">FORMAT_USER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">OPI</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">EOD_LAST</property>
+                    <property name="nativeName">EOD_LAST</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">FORMAT_USER</property>
+                    <property name="nativeName">FORMAT_USER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select 
+OPI.SFS_BUSINESS_DATE.EOD_LAST,
+OPI.SFS_BUSINESS_DATE.FORMAT_USER
+from OPI.SFS_BUSINESS_DATE]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>EOD_LAST</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>8</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>EOD_LAST</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>EOD_LAST</design:label>
+            <design:formattingHints>
+              <design:displaySize>9</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FORMAT_USER</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>FORMAT_USER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FORMAT_USER</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <joint-data-set name="DATABIZ" id="4367">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">CGP018P_DATA::OA_BIC</property>
+                    <property name="alias">OA_BIC</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP018P_DATA::OA_BIC</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP018P_DATA::RA_BIC</property>
+                    <property name="alias">RA_BIC</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP018P_DATA::RA_BIC</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP018P_DATA::MANDATE_REF</property>
+                    <property name="alias">MANDATE_REF</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP018P_DATA::MANDATE_REF</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP018P_DATA::APPLICANT_ID_NO</property>
+                    <property name="alias">APPLICANT_ID_NO</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP018P_DATA::APPLICANT_ID_NO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP018P_DATA::INPUT_SOURCE</property>
+                    <property name="alias">INPUT_SOURCE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP018P_DATA::INPUT_SOURCE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP018P_DATA::SENT_BILLER_DT</property>
+                    <property name="alias">SENT_BILLER_DT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CGP018P_DATA::SENT_BILLER_DT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP018P_DATA::RA_NUMBER</property>
+                    <property name="alias">RA_NUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP018P_DATA::RA_NUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP018P_DATA::OA_NAME</property>
+                    <property name="alias">OA_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP018P_DATA::OA_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP018P_DATA::OA_NUMBER</property>
+                    <property name="alias">OA_NUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP018P_DATA::OA_NUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP018P_DATA::RA_NAME</property>
+                    <property name="alias">RA_NAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CGP018P_DATA::RA_NAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP018P_DATA::LIMIT_AMOUNT</property>
+                    <property name="alias">LIMIT_AMOUNT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CGP018P_DATA::LIMIT_AMOUNT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BUSINESSDATE::FORMAT_USER</property>
+                    <property name="alias">FORMAT_USER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">BUSINESSDATE::FORMAT_USER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CGP018P_DATA::LAST_PROCESSED_DT</property>
+                    <property name="alias">LAST_PROCESSED_DT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CGP018P_DATA::LAST_PROCESSED_DT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BUSINESSDATE::EOD_LAST</property>
+                    <property name="alias">EOD_LAST</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">BUSINESSDATE::EOD_LAST</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">OA_BIC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">OA_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">OA_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">RA_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">RA_NAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">RA_BIC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">APPLICANT_ID_NO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">MANDATE_REF</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">LIMIT_AMOUNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">INPUT_SOURCE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">SENT_BILLER_DT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">LAST_PROCESSED_DT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">EOD_LAST</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">FORMAT_USER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <simple-property-list name="dataSets">
+                <value>CGP018P_DATA</value>
+                <value>BUSINESSDATE</value>
+            </simple-property-list>
+            <list-property name="joinConditions">
+                <structure>
+                    <property name="joinType">inner</property>
+                    <property name="joinOperator">eq</property>
+                    <property name="leftDataSet">CGP018P_DATA</property>
+                    <property name="rightDataSet">BUSINESSDATE</property>
+                    <expression name="leftExpression">dataSetRow["LAST_PROCESSED_DT"]</expression>
+                    <expression name="rightExpression">dataSetRow["EOD_LAST"]</expression>
+                </structure>
+            </list-property>
+        </joint-data-set>
+    </data-sets>
+    <styles>
+        <style name="NewStyle" id="745">
+            <property name="backgroundPositionX">right</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="SimpleUserMasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="orientation">landscape</property>
+            <page-header>
+                <grid id="3519">
+                    <property name="height">0.8083333333333333in</property>
+                    <column id="3520"/>
+                    <column id="3521"/>
+                    <column id="3524"/>
+                    <column id="3525"/>
+                    <column id="3526"/>
+                    <column id="3527"/>
+                    <column id="3529"/>
+                    <column id="3530"/>
+                    <column id="3531"/>
+                    <column id="3532"/>
+                    <column id="3533"/>
+                    <column id="3536"/>
+                    <column id="3537"/>
+                    <column id="4198"/>
+                    <row id="3538">
+                        <property name="height">0.21666666666666667in</property>
+                        <cell id="3539">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <data id="4364">
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">REPORT_NAME</property>
+                                        <expression name="expression" type="javascript">params["REPORT_NAME"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">REPORT_NAME</property>
+                            </data>
+                        </cell>
+                        <cell id="3543">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                            <property name="textAlign">center</property>
+                        </cell>
+                        <cell id="4217">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                            <property name="textAlign">center</property>
+                        </cell>
+                        <cell id="4296">
+                            <property name="colSpan">7</property>
+                            <property name="rowSpan">1</property>
+                            <property name="textAlign">center</property>
+                            <data id="4365">
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">BANK_NAME</property>
+                                        <expression name="expression" type="javascript">params["BANK_NAME"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">BANK_NAME</property>
+                            </data>
+                        </cell>
+                        <cell id="3555">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                        </cell>
+                        <cell id="4200">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                            <text id="3596">
+                                <property name="textAlign">right</property>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[Page: ]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="4302">
+                            <auto-text id="3595">
+                                <property name="type">page-number</property>
+                            </auto-text>
+                        </cell>
+                    </row>
+                    <row id="3557">
+                        <cell id="3558">
+                            <property name="colSpan">4</property>
+                            <property name="rowSpan">1</property>
+                            <grid id="4284">
+                                <property name="width">3.1083333333333334in</property>
+                                <column id="4285">
+                                    <property name="width">1.13in</property>
+                                </column>
+                                <column id="4286"/>
+                                <row id="4287">
+                                    <cell id="4288">
+                                        <text id="3598">
+                                            <property name="textAlign">left</property>
+                                            <property name="contentType">auto</property>
+                                            <text-property name="content"><![CDATA[DATE PRINTED: ]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="4289">
+                                        <text-data id="4206">
+                                            <expression name="valueExpr">Formatter.format(BirtDateTime.now(), "dd/MM/yyyy hh:mm:ss")</expression>
+                                            <property name="contentType">html</property>
+                                        </text-data>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                        <cell id="4290">
+                            <property name="colSpan">7</property>
+                            <property name="rowSpan">1</property>
+                            <property name="textAlign">center</property>
+                            <text id="3600">
+                                <property name="textAlign">center</property>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[CHANNEL DDA APPLICATION SEND TO BILLING ORGANIZATION]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="4304">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <property name="textAlign">center</property>
+                            <text id="3601">
+                                <property name="textAlign">right</property>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[PROCESSING DATE: ]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="4303">
+                            <data id="4370">
+                                <property name="dataSet">DATABIZ</property>
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">EOD_LAST</property>
+                                        <text-property name="displayName">BUSINESSDATE::EOD_LAST</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["EOD_LAST"]&#13;
+&#13;
+Formatter.format(new Date(dataSetRow["EOD_LAST"].substr(0,5).replace(",", ""), parseInt(dataSetRow["EOD_LAST"].substr(5,3).replace(",", "")) - 1, dataSetRow["EOD_LAST"].substr(8,2).replace(",", "")),  dataSetRow["FORMAT_USER"])</expression>
+                                        <property name="dataType">string</property>
+                                        <property name="allowExport">true</property>
+                                    </structure>
+                                </list-property>
+                                <property name="resultSetColumn">EOD_LAST</property>
+                            </data>
+                        </cell>
+                    </row>
+                    <row id="3576">
+                        <cell id="3577"/>
+                        <cell id="3578"/>
+                        <cell id="3581"/>
+                        <cell id="3582"/>
+                        <cell id="3583"/>
+                        <cell id="3584"/>
+                        <cell id="3586"/>
+                        <cell id="3587"/>
+                        <cell id="3588"/>
+                        <cell id="3589"/>
+                        <cell id="3590"/>
+                        <cell id="3593"/>
+                        <cell id="3594"/>
+                        <cell id="4197"/>
+                    </row>
+                </grid>
+            </page-header>
+            <page-footer>
+                <text id="2443">
+                    <property name="textAlign">center</property>
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">true</expression>
+                        </structure>
+                    </list-property>
+                    <property name="contentType">auto</property>
+                    <text-property name="content"><![CDATA[** CONTINUE NEXT PAGE **]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="3624">
+            <property name="height">100%</property>
+            <property name="width">100%</property>
+            <property name="dataSet">DATABIZ</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">OA_BIC</property>
+                    <text-property name="displayName">CGP018P_DATA::OA_BIC</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["OA_BIC"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">OA_NUMBER</property>
+                    <text-property name="displayName">CGP018P_DATA::OA_NUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["OA_NUMBER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">OA_NAME</property>
+                    <text-property name="displayName">CGP018P_DATA::OA_NAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["OA_NAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">RA_NUMBER</property>
+                    <text-property name="displayName">CGP018P_DATA::RA_NUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["RA_NUMBER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">RA_NAME</property>
+                    <text-property name="displayName">CGP018P_DATA::RA_NAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["RA_NAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">RA_BIC</property>
+                    <text-property name="displayName">CGP018P_DATA::RA_BIC</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["RA_BIC"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">APPLICANT_ID_NO</property>
+                    <text-property name="displayName">CGP018P_DATA::APPLICANT_ID_NO</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["APPLICANT_ID_NO"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">MANDATE_REF</property>
+                    <text-property name="displayName">CGP018P_DATA::MANDATE_REF</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MANDATE_REF"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">LIMIT_AMOUNT</property>
+                    <text-property name="displayName">CGP018P_DATA::LIMIT_AMOUNT</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["LIMIT_AMOUNT"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">INPUT_SOURCE</property>
+                    <text-property name="displayName">CGP018P_DATA::INPUT_SOURCE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["INPUT_SOURCE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">SENT_BILLER_DT</property>
+                    <text-property name="displayName">CGP018P_DATA::SENT_BILLER_DT</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["SENT_BILLER_DT"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">LAST_PROCESSED_DT</property>
+                    <text-property name="displayName">CGP018P_DATA::LAST_PROCESSED_DT</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["LAST_PROCESSED_DT"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">EOD_LAST</property>
+                    <text-property name="displayName">BUSINESSDATE::EOD_LAST</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["EOD_LAST"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">FORMAT_USER</property>
+                    <text-property name="displayName">BUSINESSDATE::FORMAT_USER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["FORMAT_USER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation</property>
+                    <text-property name="displayName">SEQ</text-property>
+                    <property name="dataType">integer</property>
+                    <property name="aggregateFunction">RUNNINGCOUNT</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["RA_NUMBER"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="3739"/>
+            <column id="3740"/>
+            <column id="3741"/>
+            <column id="3742"/>
+            <column id="3743"/>
+            <column id="3744"/>
+            <column id="3745"/>
+            <column id="3746"/>
+            <column id="3747"/>
+            <column id="3748"/>
+            <column id="3749"/>
+            <column id="3750"/>
+            <column id="3751"/>
+            <column id="3752"/>
+            <group id="3800">
+                <property name="groupName">RABIC</property>
+                <expression name="keyExpr" type="javascript">row["RA_BIC"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["RA_BIC"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">always-excluding-last</property>
+                <property name="pageBreakBefore">auto</property>
+                <list-property name="sort">
+                    <structure>
+                        <expression name="key" type="javascript">row["RA_BIC"]</expression>
+                        <property name="direction">asc</property>
+                        <property name="strength">-1</property>
+                    </structure>
+                </list-property>
+                <header>
+                    <row id="3840">
+                        <cell id="3841">
+                            <property name="colSpan">1</property>
+                            <property name="rowSpan">1</property>
+                        </cell>
+                        <cell id="4059"/>
+                        <cell id="4060"/>
+                        <cell id="3844">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                        </cell>
+                        <cell id="3846">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                        </cell>
+                        <cell id="3848"/>
+                        <cell id="3849"/>
+                        <cell id="3850"/>
+                        <cell id="3851"/>
+                        <cell id="3852"/>
+                        <cell id="3853"/>
+                        <cell id="3854"/>
+                    </row>
+                </header>
+            </group>
+            <group id="3871">
+                <property name="groupName">OABIC</property>
+                <expression name="keyExpr" type="javascript">row["OA_BIC"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["OA_BIC"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">always-excluding-last</property>
+                <header>
+                    <row id="3872">
+                        <cell id="3873"/>
+                        <cell id="3874"/>
+                        <cell id="3875"/>
+                        <cell id="3876"/>
+                        <cell id="3877"/>
+                        <cell id="3878"/>
+                        <cell id="3879"/>
+                        <cell id="3880"/>
+                        <cell id="3881"/>
+                        <cell id="3882"/>
+                        <cell id="3883"/>
+                        <cell id="3884"/>
+                        <cell id="3885"/>
+                        <cell id="3886"/>
+                    </row>
+                </header>
+            </group>
+            <group id="3911">
+                <property name="groupName">OANO</property>
+                <expression name="keyExpr" type="javascript">row["OA_NUMBER"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["OA_NUMBER"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">always-excluding-last</property>
+                <header>
+                    <row id="3912">
+                        <cell id="3913"/>
+                        <cell id="3914"/>
+                        <cell id="3915"/>
+                        <cell id="3916"/>
+                        <cell id="3917"/>
+                        <cell id="3918"/>
+                        <cell id="3919"/>
+                        <cell id="3920"/>
+                        <cell id="3921"/>
+                        <cell id="3922"/>
+                        <cell id="3923"/>
+                        <cell id="3924"/>
+                        <cell id="3925"/>
+                        <cell id="3926"/>
+                    </row>
+                </header>
+            </group>
+            <group id="3991">
+                <property name="groupName">OANAME</property>
+                <expression name="keyExpr" type="javascript">row["OA_NAME"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["OA_NAME"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">always-excluding-last</property>
+                <header>
+                    <row id="4031">
+                        <cell id="4032">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <text id="3859">
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[OA BIC - ACCOUNT NO: ]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="4251">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <grid id="4263">
+                                <column id="4264"/>
+                                <column id="4265"/>
+                                <row id="4266">
+                                    <cell id="4267">
+                                        <data id="4249">
+                                            <property name="resultSetColumn">OA_BIC</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="4268">
+                                        <data id="4246">
+                                            <property name="resultSetColumn">OA_NUMBER</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                        <cell id="4262"/>
+                        <cell id="4259"/>
+                        <cell id="4260"/>
+                        <cell id="4040"/>
+                        <cell id="4041"/>
+                        <cell id="4042"/>
+                        <cell id="4043"/>
+                        <cell id="4044"/>
+                        <cell id="4045"/>
+                    </row>
+                    <row id="3992">
+                        <cell id="3993">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <text id="3864">
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[CREDITOR'S NAME:  ]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="4253">
+                            <property name="colSpan">4</property>
+                            <property name="rowSpan">1</property>
+                            <data id="3990">
+                                <property name="resultSetColumn">OA_NAME</property>
+                            </data>
+                        </cell>
+                        <cell id="4256"/>
+                        <cell id="4000"/>
+                        <cell id="4001"/>
+                        <cell id="4002"/>
+                        <cell id="4003"/>
+                        <cell id="4004"/>
+                        <cell id="4005"/>
+                        <cell id="4006"/>
+                    </row>
+                    <row id="4061">
+                        <cell id="4062">
+                            <property name="colSpan">13</property>
+                            <property name="rowSpan">1</property>
+                            <text id="3870">
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[--------------------------- RECEIVING -----------------------------------------]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="4075"/>
+                    </row>
+                    <row id="4080">
+                        <cell id="4081">
+                            <text id="4156">
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[SEQ NO]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="4082">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <text id="4175">
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[RA NUMBER]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="4085"/>
+                        <cell id="4086"/>
+                        <cell id="4087">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <text id="4177">
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[MANDATE ID]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="4089"/>
+                        <cell id="4090">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <text id="4179">
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[INPUT SRC]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="4092">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <text id="4181">
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[CREATION SOURCE]]></text-property>
+                            </text>
+                        </cell>
+                    </row>
+                    <row id="4099">
+                        <cell id="4100"/>
+                        <cell id="4101">
+                            <property name="colSpan">5</property>
+                            <property name="rowSpan">1</property>
+                            <text id="4176">
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[RA NAME]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="4106">
+                            <property name="colSpan">3</property>
+                            <property name="rowSpan">1</property>
+                            <text id="4178">
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[DEBIT LIMIT]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="4109">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <text id="4180">
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[ACTION CODE]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="4111"/>
+                        <cell id="4112"/>
+                        <cell id="4113"/>
+                    </row>
+                    <row id="4137">
+                        <cell id="4138">
+                            <property name="colSpan">14</property>
+                            <property name="rowSpan">1</property>
+                            <text id="4182">
+                                <property name="borderTopStyle">solid</property>
+                                <property name="borderTopWidth">thin</property>
+                                <property name="contentType">auto</property>
+                            </text>
+                        </cell>
+                    </row>
+                </header>
+            </group>
+            <detail>
+                <row id="3682">
+                    <cell id="3683">
+                        <property name="colSpan">14</property>
+                        <property name="rowSpan">1</property>
+                        <grid id="4307">
+                            <column id="4308"/>
+                            <column id="4309"/>
+                            <column id="4310"/>
+                            <column id="4311"/>
+                            <column id="4312"/>
+                            <column id="4313"/>
+                            <column id="4314"/>
+                            <column id="4315"/>
+                            <column id="4316"/>
+                            <column id="4317"/>
+                            <column id="4318"/>
+                            <column id="4319"/>
+                            <column id="4320"/>
+                            <column id="4321"/>
+                            <row id="4322">
+                                <cell id="4323">
+                                    <data id="4368">
+                                        <property name="resultSetColumn">Aggregation</property>
+                                    </data>
+                                </cell>
+                                <cell id="4324">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="4352">
+                                        <property name="resultSetColumn">RA_NUMBER</property>
+                                    </data>
+                                </cell>
+                                <cell id="4327"/>
+                                <cell id="4328"/>
+                                <cell id="4329">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="4354">
+                                        <property name="resultSetColumn">MANDATE_REF</property>
+                                    </data>
+                                </cell>
+                                <cell id="4332">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="4356">
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[EPS]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="4334">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="4363">
+                                        <property name="resultSetColumn">INPUT_SOURCE</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="4337">
+                                <cell id="4338"/>
+                                <cell id="4339">
+                                    <property name="colSpan">5</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="4353">
+                                        <property name="resultSetColumn">RA_NAME</property>
+                                    </data>
+                                </cell>
+                                <cell id="4344">
+                                    <property name="colSpan">3</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="4355">
+                                        <structure name="numberFormat">
+                                            <property name="category">Fixed</property>
+                                            <property name="pattern">#,##0.00{RoundingMode=HALF_UP}</property>
+                                        </structure>
+                                        <property name="resultSetColumn">LIMIT_AMOUNT</property>
+                                    </data>
+                                </cell>
+                                <cell id="4347">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <text id="4357">
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[ADD]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="4349"/>
+                                <cell id="4350"/>
+                                <cell id="4351"/>
+                            </row>
+                        </grid>
+                    </cell>
+                </row>
+                <row id="3701">
+                    <cell id="3702">
+                        <text id="4362">
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[ ]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="3703"/>
+                    <cell id="3704"/>
+                    <cell id="3705"/>
+                    <cell id="3706"/>
+                    <cell id="3707"/>
+                    <cell id="3708"/>
+                    <cell id="3709"/>
+                    <cell id="3710"/>
+                    <cell id="3711"/>
+                    <cell id="3712"/>
+                    <cell id="3713"/>
+                    <cell id="3714"/>
+                    <cell id="3715"/>
+                </row>
+            </detail>
+            <footer>
+                <row id="3720">
+                    <cell id="3721">
+                        <property name="colSpan">14</property>
+                        <property name="rowSpan">1</property>
+                        <text id="3362">
+                            <property name="textAlign">center</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[** END OF REPORT **]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>
